@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ButtonsToScales : MonoBehaviour
 {
+    [SerializeField]
+    ScalesPuzzle Scales;
+
+    int thisButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +20,10 @@ public class ButtonsToScales : MonoBehaviour
     {
         
     }
+
+    public void ToScales(int thisOne)
+    {
+        Scales.MoveScales(thisOne);
+    }
+
 }

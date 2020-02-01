@@ -20,9 +20,9 @@ public class ScalesPuzzle : MonoBehaviour
         Scale2T = Scale2.GetComponent<Transform>();
         Scale3T = Scale3.GetComponent<Transform>();
 
-        scale1Line = 5;
+        scale1Line = 1;
         scale2Line = 3;
-        scale3Line = 5;
+        scale3Line = 1;
 
         goingDown1 = true;
         goingDown2 = false;
@@ -35,7 +35,7 @@ public class ScalesPuzzle : MonoBehaviour
         
     }
 
-    void MoveScales(int whichOne)
+    public void MoveScales(int whichOne)
     {
         switch (whichOne)
         {
@@ -78,9 +78,9 @@ public class ScalesPuzzle : MonoBehaviour
                     
                     //scale 3
                     if (scale3Line != 5)
-                        scale3Line += 1;
+                        scale3Line += 2;
                     else
-                        scale3Line -= 1;
+                        scale3Line -= 2;
 
                     if (scale3Line > 5)
                         scale3Line = 5 - (scale3Line - 5);
