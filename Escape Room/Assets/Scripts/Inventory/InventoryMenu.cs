@@ -23,6 +23,7 @@ public class InventoryMenu : MonoBehaviour
     private static InventoryMenu instance;
     private CanvasGroup canvasGroup;
     private PlayerMovement playerMovement;
+    private MouseLook mouseLook;
     private AudioSource audioSource;
 
     public static InventoryMenu Instance
@@ -59,6 +60,7 @@ public class InventoryMenu : MonoBehaviour
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         playerMovement.enabled = false;
+        mouseLook.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         audioSource.Play();
@@ -71,6 +73,7 @@ public class InventoryMenu : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         playerMovement.enabled = true;
+        mouseLook.enabled = true;
         audioSource.Play();
     }
 
@@ -101,6 +104,7 @@ public class InventoryMenu : MonoBehaviour
 
         canvasGroup = GetComponent<CanvasGroup>();
         playerMovement = FindObjectOfType<PlayerMovement>();
+        mouseLook = FindObjectOfType<MouseLook>();
         audioSource = GetComponent<AudioSource>();
     }
     private void Start()
