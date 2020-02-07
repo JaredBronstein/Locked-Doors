@@ -20,9 +20,13 @@ public class InventoryMenu : MonoBehaviour
     [SerializeField]
     private Text descriptionAreaText;
 
+    [SerializeField]
+    private Canvas notebook;
+
     private static InventoryMenu instance;
     private CanvasGroup canvasGroup;
     private PlayerMovement playerMovement;
+    private NotebookMenu notebookMenu;
     private MouseLook mouseLook;
     private AudioSource audioSource;
 
@@ -37,7 +41,7 @@ public class InventoryMenu : MonoBehaviour
         private set { instance = value; }
     }
 
-    private bool IsVisible => canvasGroup.alpha > 0;
+    public bool IsVisible => canvasGroup.alpha > 0;
 
     public void ExitMenuButtonClicked()
     {
@@ -106,6 +110,7 @@ public class InventoryMenu : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         mouseLook = FindObjectOfType<MouseLook>();
         audioSource = GetComponent<AudioSource>();
+        notebookMenu = notebook.GetComponent<NotebookMenu>();
     }
     private void Start()
     {
@@ -129,14 +134,19 @@ public class InventoryMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            if (IsVisible == false)
+            if (!IsVisible && !notebookMenu.isVisible)
             {
                 ShowMenu();
             }
-            else
+            else if(IsVisible)
             {
                 HideMenu();
             }
         }
+    }
+    public void ToggleNotebook()
+    {
+        HideMenu();
+        notebookMenu.ShowMenu();
     }
 }
