@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NotebookMenu : MonoBehaviour
+public class JournalMenu : MonoBehaviour
 {
     [SerializeField]
     private Transform noteListContentArea, todoListContentArea;
 
     [SerializeField]
-    private GameObject main, note, todo;
+    private GameObject mainPanel, notePanel, todoPanel;
 
     private PlayerMovement playerMovement;
     private CanvasGroup canvasGroup;
@@ -48,7 +48,7 @@ public class NotebookMenu : MonoBehaviour
         //Goes back to a prior menu, so if in todo list, go back to main tab, if in a specific note, go back to the note tab
         if(Input.GetButtonDown("Cancel"))
         {
-
+            ReturntoMain();
         }
     }
 
@@ -77,7 +77,8 @@ public class NotebookMenu : MonoBehaviour
     /// </summary>
     public void OpenNoteTab()
     {
-
+        mainPanel.SetActive(false);
+        notePanel.SetActive(true);
     }
 
     /// <summary>
@@ -85,7 +86,8 @@ public class NotebookMenu : MonoBehaviour
     /// </summary>
     public void OpenTodoTab()
     {
-
+        mainPanel.SetActive(false);
+        todoPanel.SetActive(true);
     }
 
     /// <summary>
@@ -93,6 +95,8 @@ public class NotebookMenu : MonoBehaviour
     /// </summary>
     private void ReturntoMain()
     {
-
+        todoPanel.SetActive(false);
+        notePanel.SetActive(false);
+        mainPanel.SetActive(true);
     }
 }

@@ -20,15 +20,12 @@ public class InventoryMenu : MonoBehaviour
     [SerializeField]
     private Text descriptionAreaText;
 
-    [SerializeField]
-    private Canvas notebook;
-
     private static InventoryMenu instance;
     private CanvasGroup canvasGroup;
     private PlayerMovement playerMovement;
-    private NotebookMenu notebookMenu;
     private MouseLook mouseLook;
     private AudioSource audioSource;
+    private Canvas canvas;
 
     public static InventoryMenu Instance
     {
@@ -61,6 +58,7 @@ public class InventoryMenu : MonoBehaviour
 
     private void ShowMenu()
     {
+        canvas.sortingOrder = 1;
         canvasGroup.alpha = 1;
         canvasGroup.interactable = true;
         playerMovement.enabled = false;
@@ -72,6 +70,7 @@ public class InventoryMenu : MonoBehaviour
 
     private void HideMenu()
     {
+        canvas.sortingOrder = 0;
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         Cursor.visible = false;
@@ -106,11 +105,11 @@ public class InventoryMenu : MonoBehaviour
         else
             throw new System.Exception("There is already an instance of InventoryMenu and there can only be one!");
 
+        canvas = GetComponent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         mouseLook = FindObjectOfType<MouseLook>();
         audioSource = GetComponent<AudioSource>();
-        notebookMenu = notebook.GetComponent<NotebookMenu>();
     }
     private void Start()
     {
@@ -134,7 +133,7 @@ public class InventoryMenu : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            if (!IsVisible && !notebookMenu.isVisible)
+            if (!IsVisible)
             {
                 ShowMenu();
             }
@@ -143,10 +142,5 @@ public class InventoryMenu : MonoBehaviour
                 HideMenu();
             }
         }
-    }
-    public void ToggleNotebook()
-    {
-        HideMenu();
-        notebookMenu.ShowMenu();
     }
 }
