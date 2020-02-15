@@ -21,11 +21,7 @@ public class InventoryMenu : MonoBehaviour
     private Text descriptionAreaText;
 
     private static InventoryMenu instance;
-    private CanvasGroup canvasGroup;
-    private PlayerMovement playerMovement;
-    private MouseLook mouseLook;
     private AudioSource audioSource;
-    private Canvas canvas;
 
     public static InventoryMenu Instance
     {
@@ -38,13 +34,6 @@ public class InventoryMenu : MonoBehaviour
         private set { instance = value; }
     }
 
-    public bool IsVisible => canvasGroup.alpha > 0;
-
-    public void ExitMenuButtonClicked()
-    {
-        HideMenu();
-    }
-
     /// <summary>
     /// Instantiates a new InventoryMenuItemToggle prefab and adds it to the menu
     /// </summary>
@@ -54,30 +43,6 @@ public class InventoryMenu : MonoBehaviour
         GameObject clone = Instantiate(inventoryMenuItemTogglePrefab, inventoryListContentArea);
         InventoryItemMenuToggle toggle = clone.GetComponent<InventoryItemMenuToggle>();
         toggle.AssociatedInventoryObject = inventoryObjectToAdd;
-    }
-
-    private void ShowMenu()
-    {
-        canvas.sortingOrder = 1;
-        canvasGroup.alpha = 1;
-        canvasGroup.interactable = true;
-        playerMovement.enabled = false;
-        mouseLook.enabled = false;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        audioSource.Play();
-    }
-
-    private void HideMenu()
-    {
-        canvas.sortingOrder = 0;
-        canvasGroup.alpha = 0;
-        canvasGroup.interactable = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        playerMovement.enabled = true;
-        mouseLook.enabled = true;
-        audioSource.Play();
     }
 
     /// <summary>
@@ -105,15 +70,10 @@ public class InventoryMenu : MonoBehaviour
         else
             throw new System.Exception("There is already an instance of InventoryMenu and there can only be one!");
 
-        canvas = GetComponent<Canvas>();
-        canvasGroup = GetComponent<CanvasGroup>();
-        playerMovement = FindObjectOfType<PlayerMovement>();
-        mouseLook = FindObjectOfType<MouseLook>();
         audioSource = GetComponent<AudioSource>();
     }
     private void Start()
     {
-        HideMenu();
         StartCoroutine(WaitForAudioClip());
     }
 
@@ -123,24 +83,5 @@ public class InventoryMenu : MonoBehaviour
         audioSource.volume = 0;
         yield return new WaitForSeconds(audioSource.clip.length);
         audioSource.volume = ogVolume;
-    }
-
-    private void Update()
-    {
-        HandleInput();
-    }
-    private void HandleInput()
-    {
-        if (Input.GetButtonDown("Inventory"))
-        {
-            if (!IsVisible)
-            {
-                ShowMenu();
-            }
-            else if(IsVisible)
-            {
-                HideMenu();
-            }
-        }
     }
 }

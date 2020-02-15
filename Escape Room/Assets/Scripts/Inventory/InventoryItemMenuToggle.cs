@@ -11,7 +11,9 @@ public class InventoryItemMenuToggle : MonoBehaviour
     private Image iconImage;
 
     public static event Action<InventoryObject> InventoryMenuItemSelected;
+    public static event Action<InventoryNote> JournalMenuNoteSelected;
     private InventoryObject associatedInventoryObject;
+    private InventoryNote associatedInventoryNote;
 
     public InventoryObject AssociatedInventoryObject
     {
@@ -20,6 +22,16 @@ public class InventoryItemMenuToggle : MonoBehaviour
         {
             associatedInventoryObject = value;
             iconImage.sprite = associatedInventoryObject.Icon;
+        }
+    }
+
+    public InventoryNote AssociatedInventoryNote
+    {
+        get { return associatedInventoryNote;  }
+        set
+        {
+            associatedInventoryNote = value;
+            iconImage.sprite = associatedInventoryNote.Icon;
         }
     }
 
@@ -32,6 +44,12 @@ public class InventoryItemMenuToggle : MonoBehaviour
         //We only want to do this when the toggle is selected.
         if (isOn)
             InventoryMenuItemSelected?.Invoke(AssociatedInventoryObject);
+    }
+
+    public void JournalMenuNoteWasToggled(bool isOn)
+    {
+        if (isOn)
+            JournalMenuNoteSelected?.Invoke(AssociatedInventoryNote);
     }
 
     private void Awake()
