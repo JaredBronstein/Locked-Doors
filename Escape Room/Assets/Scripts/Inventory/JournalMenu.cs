@@ -21,6 +21,7 @@ public class JournalMenu : MonoBehaviour
     private InventoryMenu inventoryMenu;
     private MouseLook mouseLook;
     private static JournalMenu instance;
+    private List<GameObject> list = new List<GameObject>();
 
     public static JournalMenu Instance
     {
@@ -131,9 +132,22 @@ public class JournalMenu : MonoBehaviour
         GameObject Clone = Instantiate(GoalPrefab, GoalListContentArea);
         GoalText goalText = Clone.GetComponent<GoalText>();
         goalText.AssociatedGoal = GoalToAdd;
+        list.Add(Clone);
     }
+    /// <summary>
+    /// For each gameobject in GoalListContentArea, check to see if the ID int in the GoalText script is equal to that of the GoalToRemove. 
+    /// If so, remove it from the list
+    /// </summary>
+    /// <param name="GoalToRemove"></param>
     public void RemoveGoal(JournalGoal GoalToRemove)
     {
-
+        foreach(GameObject gameObject in list.ToArray())
+        {
+            if (gameObject.GetComponent<GoalText>().AssociatedGoal.ID == GoalToRemove.ID)
+            {
+                list.Remove(gameObject);
+                Destroy(gameObject);
+            }
+        }
     }
 }
