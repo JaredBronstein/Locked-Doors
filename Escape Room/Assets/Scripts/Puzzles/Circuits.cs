@@ -18,22 +18,22 @@ public class Circuits : MonoBehaviour
         {
             case 1:
                 RotationNumber = 1;
-                thisRotation.Rotate(0, y, z);
+                thisRotation.Rotate(0, -90, 0);
                 break;
 
             case 2:
                 RotationNumber = 2;
-                thisRotation.Rotate(90, y, z);
+                thisRotation.Rotate(0, -90, 0);
                 break;
 
             case 3:
                 RotationNumber = 3;
-                thisRotation.Rotate(180, y, z);
+                thisRotation.Rotate(0, -90, 0);
                 break;
 
             case 4:
                 RotationNumber = 4;
-                thisRotation.Rotate(270, y, z);
+                thisRotation.Rotate(0, -90, 0);
                 break;
         }
 
