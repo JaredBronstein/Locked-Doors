@@ -8,7 +8,17 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     [SerializeField]
     protected string displayText = nameof(InteractiveObject);
 
+    [Tooltip("Number used in the inventory to determine it's ID number.")]
+    [SerializeField]
+    protected int inventoryID;
+
+    [Tooltip("Number used in the environment to determine it's ID number. Zero means it can be interacted with without an object in hand")]
+    [SerializeField]
+    protected int environmentID;
+
     public virtual string DisplayText => displayText;
+    public int InventoryID => inventoryID;
+    public int EnvironmentID => environmentID;
     protected AudioSource audioSource;
 
     protected virtual void Awake()

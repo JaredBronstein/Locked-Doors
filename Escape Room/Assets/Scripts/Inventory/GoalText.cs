@@ -11,7 +11,7 @@ public class GoalText : MonoBehaviour
 
     [Tooltip("The goal's ID number for quick reference")]
     [SerializeField]
-    private int ID;
+    private int GoalID;
 
     private JournalGoal associatedGoal;
 
@@ -22,7 +22,7 @@ public class GoalText : MonoBehaviour
         {
             associatedGoal = value;
             Goal.text = associatedGoal.GoalText;
-            ID = associatedGoal.ID;
+            GoalID = associatedGoal.GoalID;
         }
     }
 }

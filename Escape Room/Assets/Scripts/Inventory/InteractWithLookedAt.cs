@@ -9,10 +9,16 @@ using UnityEngine;
 public class InteractWithLookedAt : MonoBehaviour
 {
     private IInteractive lookedAtInteractive;
+    private IDTracker idTracker;
+
+    private void Awake()
+    {
+        idTracker = GetComponent<IDTracker>();
+    }
 
     void Update()
     {
-        if (Input.GetButtonDown("Interact") && lookedAtInteractive != null)
+        if (Input.GetButtonDown("Interact") && lookedAtInteractive != null && idTracker.CanInteract())
         {
             Debug.Log("Player pressed the Interact button.");
             lookedAtInteractive.InteractWith();

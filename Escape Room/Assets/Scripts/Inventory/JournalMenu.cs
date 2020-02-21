@@ -143,7 +143,7 @@ public class JournalMenu : MonoBehaviour
     {
         foreach(GameObject gameObject in list.ToArray())
         {
-            if (gameObject.GetComponent<GoalText>().AssociatedGoal.ID == GoalToRemove.ID)
+            if (gameObject.GetComponent<GoalText>().AssociatedGoal.GoalID == GoalToRemove.GoalID)
             {
                 list.Remove(gameObject);
                 Destroy(gameObject);

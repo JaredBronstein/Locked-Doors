@@ -50,6 +50,7 @@ public class DetectLookedAtInteractive : MonoBehaviour
         bool objectWasDetected = Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out hitInfo, maxRange);
 
         IInteractive interactive = null;
+        InteractiveObject interactiveObject = null;
 
         LookedAtInteractive = interactive;
 
@@ -57,6 +58,7 @@ public class DetectLookedAtInteractive : MonoBehaviour
         {
             //Debug.Log($"Play is looking at: {hitInfo.collider.gameObject.name}");
             interactive = hitInfo.collider.gameObject.GetComponent<IInteractive>();
+            interactiveObject = hitInfo.collider.gameObject.GetComponent<InteractiveObject>();
         }
 
         return interactive;

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class InventoryNote : InteractiveObject
 {
-    [Tooltip("The name of the object, as it will appear in the inventory menu UI")]
+    [Tooltip("The name of the note, as it appears in the Journal menu")]
     [SerializeField]
     private string objectName = nameof(InventoryObject);
 
-    [Tooltip("The text that will display when the player selects this object in the inventory menu")]
+    [Tooltip("The text that will display when the player selects this object in the Journal menu")]
     [TextArea(3, 8)]
     [SerializeField]
     private string description;
