@@ -13,7 +13,7 @@ public class RotatePuzzle : MonoBehaviour
     Transform thisTransform;
     Circuits thisCircuit;
 
-    bool correctFormation;
+    public bool correctFormation;
     
     void Awake()
     {
@@ -29,6 +29,9 @@ public class RotatePuzzle : MonoBehaviour
     public void ChangeRotation(int whichOne)
     {
         thisCircuit = rotatingWiresLocations[whichOne - 1].GetComponent<Circuits>();
+        if (thisCircuit.RotationNumber == 4)
+            thisCircuit.RotationNumber = 0;
+
         thisCircuit.ChangeState(thisCircuit.RotationNumber + 1);
     }
 
@@ -36,8 +39,8 @@ public class RotatePuzzle : MonoBehaviour
     {
         for(int i = 0; i < rotatingWiresLocations.Length; i++)
         {
-            thisTransform = rotatingWiresLocations[i].GetComponent<Transform>();
-            if (thisTransform.rotation.x == puzzleCode[i])
+            thisCircuit = rotatingWiresLocations[i].GetComponent<Circuits>();
+            if (thisCircuit.RotationNumber == puzzleCode[i])
                 correctFormation = true;
             else
             {
