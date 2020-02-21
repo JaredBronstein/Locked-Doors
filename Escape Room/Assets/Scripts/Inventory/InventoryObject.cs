@@ -24,12 +24,14 @@ public class InventoryObject : InteractiveObject
     private new Renderer renderer;
     private new Collider collider;
     private new BoxCollider boxCollider;
+    private JournalGoal journalGoal;
 
     private void Start()
     {
         renderer = GetComponent<Renderer>();
         collider = GetComponent<Collider>();
         boxCollider = GetComponent<BoxCollider>();
+        journalGoal = GetComponent<JournalGoal>();
     }
 
     public InventoryObject()
@@ -49,6 +51,7 @@ public class InventoryObject : InteractiveObject
         base.InteractWith();
         PlayerInventory.InventoryObjects.Add(this);
         InventoryMenu.Instance.AddItemToMenu(this);
+        journalGoal.AddGoal();
         renderer.enabled = false;
         collider.enabled = false;
         boxCollider.enabled = false;

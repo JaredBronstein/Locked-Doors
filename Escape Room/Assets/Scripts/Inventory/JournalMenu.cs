@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class JournalMenu : MonoBehaviour
 {
     [SerializeField]
-    private Transform noteListContentArea, todoListContentArea;
+    private Transform noteListContentArea, GoalListContentArea;
 
     [SerializeField]
-    private GameObject NotePrefab, mainPanel, notePanel, todoPanel;
+    private GameObject NotePrefab, GoalPrefab, mainPanel, notePanel, todoPanel;
 
     [SerializeField]
     private Text noteSpace;
@@ -78,7 +78,7 @@ public class JournalMenu : MonoBehaviour
     /// <summary>
     /// Hides Main Notebook buttons and reveals content area for To-Do List
     /// </summary>
-    public void OpenTodoTab()
+    public void OpenGoalTab()
     {
         mainCanvas.alpha = 0;
         mainCanvas.interactable = false;
@@ -126,7 +126,13 @@ public class JournalMenu : MonoBehaviour
         noteSpace.text = inventoryNoteSelected.Description;
     }
 
-    public void AddToDoToJournal()
+    public void AddGoal(JournalGoal GoalToAdd)
+    {
+        GameObject Clone = Instantiate(GoalPrefab, GoalListContentArea);
+        GoalText goalText = Clone.GetComponent<GoalText>();
+        goalText.AssociatedGoal = GoalToAdd;
+    }
+    public void RemoveGoal(JournalGoal GoalToRemove)
     {
 
     }
