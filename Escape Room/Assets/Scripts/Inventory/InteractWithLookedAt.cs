@@ -9,20 +9,29 @@ using UnityEngine;
 public class InteractWithLookedAt : MonoBehaviour
 {
     private IInteractive lookedAtInteractive;
+    private InteractiveObject lookedAtInteractiveObject;
     private IDTracker idTracker;
+    private HUDController HUDcontroller;
 
     private void Awake()
     {
         idTracker = GetComponent<IDTracker>();
+        HUDcontroller = FindObjectOfType<HUDController>();
     }
 
     void Update()
     {
-        //&& idTracker.CanInteract()
-        if (Input.GetButtonDown("Interact") && lookedAtInteractive != null )
+        //Checks 3 things, if the player presses the interact button, there is something to interact with, and if the IDs match.
+        //Consider revising to account for multiple possibilities, it'll make more if statements but it is helpful
+        //IE To reset player ID, have it happen if the player presses the interact button and nothing else
+        if (Input.GetButtonDown("Interact"))
         {
-            Debug.Log("Player pressed the Interact button.");
-            lookedAtInteractive.InteractWith();
+            if(lookedAtInteractive != null && idTracker.CanInteract(lookedAtInteractive.ID()))
+            {
+                lookedAtInteractive.InteractWith();
+            }
+            idTracker.ResetID();
+            HUDcontroller.ResetImage();
         }
     }
 

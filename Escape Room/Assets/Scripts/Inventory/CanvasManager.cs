@@ -10,11 +10,13 @@ public class CanvasManager : MonoBehaviour
     private PlayerMovement playerMovement;
     private MouseLook mouseLook;
     private CanvasGroup inventoryCanvas, journalCanvas;
+    private InteractWithLookedAt interactWithLookedAt;
 
     private void Awake()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
         mouseLook = FindObjectOfType<MouseLook>();
+        interactWithLookedAt = FindObjectOfType<InteractWithLookedAt>();
         hud.SetActive(true);
         inventoryCanvas = inventory.GetComponent<CanvasGroup>();
         journalCanvas = journal.GetComponent<CanvasGroup>();
@@ -40,6 +42,7 @@ public class CanvasManager : MonoBehaviour
         {
             playerMovement.enabled = true;
             mouseLook.enabled = true;
+            interactWithLookedAt.enabled = true;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             hud.SetActive(true);
@@ -58,6 +61,7 @@ public class CanvasManager : MonoBehaviour
         {
             playerMovement.enabled = true;
             mouseLook.enabled = true;
+            interactWithLookedAt.enabled = true;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             hud.SetActive(true);
@@ -72,6 +76,7 @@ public class CanvasManager : MonoBehaviour
         {
             playerMovement.enabled = false;
             mouseLook.enabled = false;
+            interactWithLookedAt.enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             hud.SetActive(false);
@@ -90,6 +95,7 @@ public class CanvasManager : MonoBehaviour
         {
             playerMovement.enabled = true;
             mouseLook.enabled = true;
+            interactWithLookedAt.enabled = false;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             hud.SetActive(true);
@@ -104,6 +110,7 @@ public class CanvasManager : MonoBehaviour
         {
             playerMovement.enabled = false;
             mouseLook.enabled = false;
+            interactWithLookedAt.enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             hud.SetActive(false);

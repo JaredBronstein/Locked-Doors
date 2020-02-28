@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IDTracker : MonoBehaviour
 {
+    [SerializeField]
     private int ID = 0;
 
     public void ChangeID(int id)
@@ -15,8 +16,8 @@ public class IDTracker : MonoBehaviour
         ID = 0;
     }
 
-    public bool CanInteract(InteractiveObject interactiveObject)
+    public bool CanInteract(int environmentID)
     {
-        return (ID == interactiveObject.EnvironmentID);
+        return (ID == environmentID);
     }
 }

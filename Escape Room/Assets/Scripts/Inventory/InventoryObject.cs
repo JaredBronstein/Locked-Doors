@@ -51,7 +51,8 @@ public class InventoryObject : InteractiveObject
         base.InteractWith();
         PlayerInventory.InventoryObjects.Add(this);
         InventoryMenu.Instance.AddItemToMenu(this);
-        journalGoal.AddGoal();
+        if(this.GetComponent<JournalGoal>() != null)
+            journalGoal.AddGoal();
         renderer.enabled = false;
         collider.enabled = false;
         boxCollider.enabled = false;
