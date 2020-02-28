@@ -17,6 +17,4 @@ public class Cloth : MonoBehaviour
         Physics.IgnoreLayerCollision(0, 9);
     }
 
-
-
 }
