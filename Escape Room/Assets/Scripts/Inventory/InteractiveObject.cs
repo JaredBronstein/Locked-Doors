@@ -39,4 +39,8 @@ public class InteractiveObject : MonoBehaviour, IInteractive
         }
         Debug.Log($"Player just interacted with {gameObject.name}.");
     }
+    public virtual int ID()
+    {
+        return environmentID;
+    }
 }

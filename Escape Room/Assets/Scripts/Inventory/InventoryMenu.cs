@@ -22,6 +22,8 @@ public class InventoryMenu : MonoBehaviour
 
     private static InventoryMenu instance;
     private AudioSource audioSource;
+    private IDTracker playerID;
+    private HUDController HUDcontroller;
 
     public static InventoryMenu Instance
     {
@@ -52,6 +54,8 @@ public class InventoryMenu : MonoBehaviour
     {
         itemLabelText.text = inventoryObjectThatWasSelected.ObjectName;
         descriptionAreaText.text = inventoryObjectThatWasSelected.Description;
+        playerID.ChangeID(inventoryObjectThatWasSelected.InventoryID);
+        HUDcontroller.ImageSwap(inventoryObjectThatWasSelected.Icon);
     }
 
     private void OnEnable()
@@ -71,6 +75,8 @@ public class InventoryMenu : MonoBehaviour
             throw new System.Exception("There is already an instance of InventoryMenu and there can only be one!");
 
         audioSource = GetComponent<AudioSource>();
+        playerID = FindObjectOfType<IDTracker>();
+        HUDcontroller = FindObjectOfType<HUDController>();
     }
     private void Start()
     {
