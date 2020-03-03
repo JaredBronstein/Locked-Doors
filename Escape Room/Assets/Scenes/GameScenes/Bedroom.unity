@@ -1582,7 +1582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &437093383
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7527,12 +7527,12 @@ GameObject:
   - component: {fileID: 1829090306}
   - component: {fileID: 1829090305}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Bookshelf Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1829090305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7628,7 +7628,7 @@ PrefabInstance:
     - target: {fileID: 4432378009799938036, guid: b15dda3c9cc92bc469478b06f413f68a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4432378009799937931, guid: b15dda3c9cc92bc469478b06f413f68a,
         type: 3}
