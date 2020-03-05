@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Made by Jonathan Way, Editted by Jared Bronstein
 public class BookshelffPuzzle : MonoBehaviour
 {
     [SerializeField]
@@ -10,17 +11,14 @@ public class BookshelffPuzzle : MonoBehaviour
     [SerializeField]
     Material book1Mat, book2Mat, book3Mat, book4Mat;
 
+    [SerializeField]
+    private InteractivePuzzle interactivePuzzle;
+
     Books thisBook;
-    public bool orderCorrect;
+    public bool orderCorrect = false;
     int thisBookNumber, nextBookNumber;
 
-    private void Awake()
-    {
-        orderCorrect = false;
-    }
-
-
-    // Update is called once per frame
+    //Note: Move from Update to at the end of BookSwitch. Small memory save but that way it only checks after something is changed
     void Update()
     {
         BookCheck();
@@ -34,6 +32,7 @@ public class BookshelffPuzzle : MonoBehaviour
             if (thisBook.BookNumber == i + 1)
             {
                 orderCorrect = true;
+                interactivePuzzle.DisablePuzzle();
             }
             else
             {
