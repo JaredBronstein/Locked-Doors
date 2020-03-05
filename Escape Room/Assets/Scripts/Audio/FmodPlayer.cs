@@ -9,13 +9,15 @@ public class FmodPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
-        MaterialCheck();
+       // MaterialCheck();
         Debug.DrawRay(transform.position, Vector3.down * distance, Color.blue);
     }
 
-    void MaterialCheck()
+   /* void MaterialCheck()
     {
         RaycastHit hit;
+
+        //this doesnt seem to want to compile right
         hit = Physics.Raycast(transform.position, Vector3.down, distance);
 
         if (hit.collider)
@@ -30,6 +32,7 @@ public class FmodPlayer : MonoBehaviour
                 Material = 1f;
         }
     }
+    */
 
     void PlayFootstepsEvent(string path)
     {
