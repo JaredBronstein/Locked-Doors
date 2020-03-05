@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 809156013784896629}
+  - component: {fileID: 1483716185}
   m_Layer: 5
   m_Name: HUD Canvas
   m_TagString: Untagged
@@ -28,11 +29,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 809156014353464274}
-  - {fileID: 741367244248298094}
   - {fileID: 809156013983353577}
+  - {fileID: 741367244248298094}
   m_Father: {fileID: 809156014223090410}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1483716185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809156013784896586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd1701e5bd55ae459b77ffde1db19a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 42056562765053062}
 --- !u!1 &809156013800845388
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +241,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 809156013784896629}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1042,6 +1056,7 @@ MonoBehaviour:
   inventory: {fileID: 809156014167058922}
   journal: {fileID: 809156015545045921}
   hud: {fileID: 809156013784896586}
+  canUse: 1
 --- !u!1 &809156014315691067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,7 +3898,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 809156013784896629}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

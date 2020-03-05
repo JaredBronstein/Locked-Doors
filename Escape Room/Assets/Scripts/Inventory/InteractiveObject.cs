@@ -34,7 +34,6 @@ public class InteractiveObject : MonoBehaviour, IInteractive
         }
         catch (System.Exception)
         {
-
             throw new System.Exception("Missing AudioSource component: InteractiveObject requires an AudioSource component");
         }
         Debug.Log($"Player just interacted with {gameObject.name}.");

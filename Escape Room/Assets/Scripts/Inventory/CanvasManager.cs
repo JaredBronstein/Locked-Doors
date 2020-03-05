@@ -12,6 +12,8 @@ public class CanvasManager : MonoBehaviour
     private CanvasGroup inventoryCanvas, journalCanvas;
     private InteractWithLookedAt interactWithLookedAt;
 
+    public bool canUse = true;
+
     private void Awake()
     {
         playerMovement = FindObjectOfType<PlayerMovement>();
@@ -30,28 +32,31 @@ public class CanvasManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Inventory") && !journalCanvas.interactable)
+        if(canUse)
         {
-            ToggleInventory();
-        }
-        if(Input.GetButtonDown("Notebook") && !inventoryCanvas.interactable)
-        {
-            ToggleJournal();
-        }
-        if(Input.GetButtonDown("Cancel"))
-        {
-            playerMovement.enabled = true;
-            mouseLook.enabled = true;
-            interactWithLookedAt.enabled = true;
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            hud.SetActive(true);
-            inventoryCanvas.alpha = 0;
-            inventoryCanvas.interactable = false;
-            inventoryCanvas.blocksRaycasts = false;
-            journalCanvas.alpha = 0;
-            journalCanvas.interactable = false;
-            journalCanvas.blocksRaycasts = false;
+            if (Input.GetButtonDown("Inventory") && !journalCanvas.interactable)
+            {
+                ToggleInventory();
+            }
+            if (Input.GetButtonDown("Notebook") && !inventoryCanvas.interactable)
+            {
+                ToggleJournal();
+            }
+            if (Input.GetButtonDown("Cancel"))
+            {
+                playerMovement.enabled = true;
+                mouseLook.enabled = true;
+                interactWithLookedAt.enabled = true;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                hud.SetActive(true);
+                inventoryCanvas.alpha = 0;
+                inventoryCanvas.interactable = false;
+                inventoryCanvas.blocksRaycasts = false;
+                journalCanvas.alpha = 0;
+                journalCanvas.interactable = false;
+                journalCanvas.blocksRaycasts = false;
+            }
         }
     }
 
