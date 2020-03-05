@@ -32,14 +32,15 @@ public class BookshelffPuzzle : MonoBehaviour
             if (thisBook.BookNumber == i + 1)
             {
                 orderCorrect = true;
-                interactivePuzzle.DisablePuzzle();
             }
             else
             {
                 orderCorrect = false;
                 i = Books.Length;
-            }        
+            }   
         }
+            if(orderCorrect == true)
+                interactivePuzzle.DisablePuzzle();
     }
 
     private void MatSwitch(int whichOne, int whatColor)
