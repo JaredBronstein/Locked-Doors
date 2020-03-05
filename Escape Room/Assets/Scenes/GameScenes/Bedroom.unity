@@ -2375,6 +2375,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rug
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a113eb711ef9278479bc4e53c13e7581,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a113eb711ef9278479bc4e53c13e7581,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7063,6 +7068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rug (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a113eb711ef9278479bc4e53c13e7581,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a113eb711ef9278479bc4e53c13e7581,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7271,6 +7281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Master_Bedroom_Walls_and_Floor 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a7cd18682fe3b6e44b2d21ff4e6b7d64,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wood
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a7cd18682fe3b6e44b2d21ff4e6b7d64,
         type: 3}
