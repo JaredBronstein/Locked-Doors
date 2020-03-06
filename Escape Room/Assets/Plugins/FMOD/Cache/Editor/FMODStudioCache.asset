@@ -15,12 +15,12 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: 64943c3229e7d742a38462130175716e
   Banks:
-  - {fileID: 3728220825901857787}
+  - {fileID: -491100284037212192}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 2358034691623233407}
+  - {fileID: 2401995753669236548}
   MinDistance: 0
   MaxDistance: 0
   Length: 500
@@ -130,6 +130,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-491100284037212192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637190273886782483
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-305535999404508189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,16 +179,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5528478741228875201}
-  - {fileID: 3728220825901857787}
+  - {fileID: -491100284037212192}
   EditorEvents:
   - {fileID: -7114936168088169004}
   - {fileID: 6104018849502664667}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3728220825901857787}
+  - {fileID: -491100284037212192}
   StringsBanks:
   - {fileID: 5528478741228875201}
-  stringsBankWriteTime: 637190208906956118
+  stringsBankWriteTime: 637190273886802432
   cacheVersion: 3
 --- !u!114 &2067117984853023978
 MonoBehaviour:
@@ -190,6 +208,23 @@ MonoBehaviour:
   Default: 0
   Exists: 0
 --- !u!114 &2358034691623233407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
+--- !u!114 &2401995753669236548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +292,7 @@ MonoBehaviour:
   lastModified: 637190208906906254
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5528478741228875201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: locked-doors-fmod-project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637190208906956118
+  lastModified: 637190273886802432
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -293,7 +328,7 @@ MonoBehaviour:
   Path: event:/Bedroom Ambience
   guid: e663c0865a038845a77c466d400529c9
   Banks:
-  - {fileID: 3728220825901857787}
+  - {fileID: -491100284037212192}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
