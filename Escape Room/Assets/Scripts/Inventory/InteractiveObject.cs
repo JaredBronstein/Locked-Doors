@@ -14,11 +14,11 @@ public class InteractiveObject : MonoBehaviour, IInteractive
 
     [Tooltip("Number used in the environment to determine it's ID number. Zero means it can be interacted with without an object in hand")]
     [SerializeField]
-    protected int environmentID;
+    protected int[] environmentIDs;
 
     public virtual string DisplayText => displayText;
     public int InventoryID => inventoryID;
-    public int EnvironmentID => environmentID;
+    public int[] EnvironmentIDs => environmentIDs;
     protected AudioSource audioSource;
 
     protected virtual void Awake()
@@ -26,7 +26,7 @@ public class InteractiveObject : MonoBehaviour, IInteractive
         audioSource = GetComponent<AudioSource>();
     }
 
-    public virtual void InteractWith()
+    public virtual void InteractWith(int id)
     {
         try
         {
@@ -38,8 +38,8 @@ public class InteractiveObject : MonoBehaviour, IInteractive
         }
         Debug.Log($"Player just interacted with {gameObject.name}.");
     }
-    public virtual int ID()
+    public virtual int[] ID()
     {
-        return environmentID;
+        return environmentIDs;
     }
 }

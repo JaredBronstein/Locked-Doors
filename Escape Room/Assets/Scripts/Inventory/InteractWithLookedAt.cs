@@ -28,7 +28,7 @@ public class InteractWithLookedAt : MonoBehaviour
         {
             if(lookedAtInteractive != null && idTracker.CanInteract(lookedAtInteractive.ID()))
             {
-                lookedAtInteractive.InteractWith();
+                lookedAtInteractive.InteractWith(idTracker.GetID());
             }
             idTracker.ResetID();
             HUDcontroller.ResetImage();
