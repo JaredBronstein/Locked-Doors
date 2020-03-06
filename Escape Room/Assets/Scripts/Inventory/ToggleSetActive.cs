@@ -17,11 +17,11 @@ public class ToggleSetActive : InteractiveObject
     /// <summary>
     /// Toggles the activeSelf value for the objectToToggle when the player interacts with this object
     /// </summary>
-    public override void InteractWith()
+    public override void InteractWith(int ID)
     {
         if (IsReusable || !hasBeenUsed)
         {
-            base.InteractWith();
+            base.InteractWith(ID);
             objectToToggle.SetActive(!objectToToggle.activeSelf);
             hasBeenUsed = true;
             if (!IsReusable) displayText = string.Empty;

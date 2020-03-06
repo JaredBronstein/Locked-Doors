@@ -46,9 +46,9 @@ public class InventoryObject : InteractiveObject
     ///     Can't use Destroy, because I need to keep the gameobject in the inventory list.
     ///     So we just disable the collider and renderer
     /// </summary>
-    public override void InteractWith()
+    public override void InteractWith(int id)
     {
-        base.InteractWith();
+        base.InteractWith(id);
         PlayerInventory.InventoryObjects.Add(this);
         InventoryMenu.Instance.AddItemToMenu(this);
         if(this.GetComponent<JournalGoal>() != null)

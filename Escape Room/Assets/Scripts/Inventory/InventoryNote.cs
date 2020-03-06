@@ -37,9 +37,9 @@ public class InventoryNote : InteractiveObject
         displayText = $"Take {objectName}";
     }
 
-    public override void InteractWith()
+    public override void InteractWith(int ID)
     {
-        base.InteractWith();
+        base.InteractWith(ID);
         PlayerInventory.InventoryNotes.Add(this);
         JournalMenu.Instance.AddNoteToJournal(this);
         renderer.enabled = false;
