@@ -9,7 +9,7 @@ public class WardrobeRotate : MonoBehaviour
     GameObject Key;
 
     [SerializeField]
-    int resetX, resetY, resetZ;
+    float resetX, resetY, resetZ;
 
     [SerializeField]
     GameObject[] Pieces;
@@ -33,7 +33,7 @@ public class WardrobeRotate : MonoBehaviour
         for(int i = 0; i < Pieces.Length; i++)
         {
             thisTransform = Pieces[i].GetComponent<Transform>();
-            thisTransform.Rotate(0,0,whichWay);
+            thisTransform.Rotate(0, whichWay, 0);
         }
     }
 
