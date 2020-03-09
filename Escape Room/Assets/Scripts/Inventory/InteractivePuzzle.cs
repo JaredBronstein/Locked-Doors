@@ -12,6 +12,7 @@ public class InteractivePuzzle : InteractiveObject
     private CanvasManager canvasManager;
     private PlayerMovement playerMovement;
     private MouseLook mouseLook;
+    private PuzzleManager puzzleManager;
 
     protected override void Awake()
     {
@@ -19,6 +20,7 @@ public class InteractivePuzzle : InteractiveObject
         canvasManager = FindObjectOfType<CanvasManager>();
         playerMovement = FindObjectOfType<PlayerMovement>();
         mouseLook = FindObjectOfType<MouseLook>();
+        puzzleManager = GetComponent<PuzzleManager>();
         PuzzleCamera.enabled = false;
         PuzzleCanvas.enabled = false;
     }
@@ -30,11 +32,18 @@ public class InteractivePuzzle : InteractiveObject
         }
     }
 
-    public override void InteractWith()
+    public override void InteractWith(int id)
     {
         Debug.Log("Interacted with puzzle");
-        base.InteractWith();
-        EnablePuzzle();
+        base.InteractWith(id);
+        if(id != 0)
+        {
+            puzzleManager.InteractWithPuzzle(id);
+        }
+        else
+        {
+            EnablePuzzle();
+        }
     }
     public void EnablePuzzle()
     {

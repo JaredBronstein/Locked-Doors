@@ -7,6 +7,8 @@ public class IDTracker : MonoBehaviour
     [SerializeField]
     private int ID = 0;
 
+    private bool Bool;
+
     public void ChangeID(int id)
     {
         ID = id;
@@ -16,8 +18,19 @@ public class IDTracker : MonoBehaviour
         ID = 0;
     }
 
-    public bool CanInteract(int environmentID)
+    public bool CanInteract(int[] environmentIDs)
     {
-        return (ID == environmentID);
+        foreach(int id in environmentIDs)
+        {
+            if(id == ID)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public int GetID()
+    {
+        return ID;
     }
 }
