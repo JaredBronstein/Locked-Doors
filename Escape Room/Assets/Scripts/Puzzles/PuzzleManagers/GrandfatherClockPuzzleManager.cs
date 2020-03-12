@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class GrandfatherClockPuzzleManager : PuzzleManager
 {
-    private bool IsReady = false;
+    private bool[] Weights = new bool[3];
     [SerializeField]
-    private GameObject Weight1, Weight2, Weight3;
+    private MeshRenderer Weight1, Weight2, Weight3;
+
+    private InteractivePuzzle interactivePuzzle;
 
     protected override void Awake()
     {
         base.Awake();
-        Weight1.SetActive(false);
-        Weight2.SetActive(false);
-        Weight3.SetActive(false);
-        IsReady = Weight1.activeInHierarchy && Weight2.activeInHierarchy && Weight3.activeInHierarchy;
+        Weight1.enabled = Weight2.enabled = Weight3.enabled = false;
+        interactivePuzzle = GetComponent<InteractivePuzzle>();
     }
 
     public override void InteractWithPuzzle(int ID)
@@ -22,19 +22,22 @@ public class GrandfatherClockPuzzleManager : PuzzleManager
         base.InteractWithPuzzle(ID);
         if(ID == 9)
         {
-            Weight1.SetActive(true);
+            Weight1.enabled = true;
+            Weights[0] = true;
         }
         if(ID == 10)
         {
-            Weight2.SetActive(true);
+            Weight2.enabled = true;
+            Weights[1] = true;
         }
         if(ID == 11)
         {
-            Weight3.SetActive(true);
+            Weight3.enabled = true;
+            Weights[2] = true;
         }
-        if(IsReady)
+        if(Weights[0] && Weights[1] && Weights[2])
         {
-            InteractivePuzzle.EnvironmentIDs[0] = 0;
+            interactivePuzzle.EnvironmentIDs[0] = 0;
         }
     }
 }
