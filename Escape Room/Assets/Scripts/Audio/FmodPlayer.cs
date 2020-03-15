@@ -4,38 +4,72 @@ using UnityEngine;
 
 public class FmodPlayer : MonoBehaviour
 {
-    private float distance = 0.05f;
+    // ckrueger audio
+
+    CharacterController controller;
+
+    private bool isMoving = false;
+    private float distance = 1.5f;
     private float Material;
+
+    void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
 
     void FixedUpdate()
     {
         MaterialCheck();
-        Debug.DrawRay(transform.position, Vector3.down * distance, Color.blue);
+        MovementCheck();
     }
 
-    void MaterialCheck()
+    // change boolean state to reflect whether or not player is moving
+    void MovementCheck()
     {
-        RaycastHit hit;
-        hit = Physics.Raycast(transform.position, Vector3.down, distance);
-
-        if (hit.collider)
+        if (controller.velocity > 0.01f)
         {
-            if (hit.collider.tag == "Wood")
-                Material = 1f;
-            else if (hit.collider.tag == "Carpet")
-                Material = 2f;
-            else if (hit.collider.tag == "Stone")
-                Material = 3f;
-            else
-                Material = 1f;
+            isMoving = true;
+        }
+        else
+        {
+            isMoving = false;
         }
     }
 
-    void PlayFootstepsEvent(string path)
+    // use a ray to check the material of colliders beneath player 
+    void MaterialCheck()
     {
-        FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(path);
-        Footsteps.setParameterByName("Material", Material);
-        Footsteps.start();
-        Footsteps.release();
+        RaycastHit hit;
+        Debug.DrawRay(transform.position, Vector3.down * distance, Color.blue);
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, distance))
+        {
+            if (hit.collider.tag == "Wood")
+            {
+                Material = 1f;
+            }
+            else if (hit.collider.tag == "Carpet")
+            {
+                Material = 2f;
+            }
+            else if (hit.collider.tag == "Stone")
+            {
+                Material = 3f;
+            }
+            else
+            {
+                Material = 1f;
+            }
+
+        }
+    }
+
+    // play footstep sound repeatedly while player is moving
+    void PlayFootstep()
+    {
+        if (isMoving)
+        {
+            InvokeRepeating(FMODUnity.RuntimeManager.PlayOneShot("Footsteps", gameObject.GetComponent<Transform>().position), 0f, 0.3f);
+        }
     }
 }
