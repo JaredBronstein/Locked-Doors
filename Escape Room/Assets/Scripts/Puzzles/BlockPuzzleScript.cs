@@ -10,19 +10,10 @@ public class BlockPuzzleScript : MonoBehaviour
     [SerializeField]
     Material Open, Blocked, Key, Hole;
 
+    [SerializeField]
+    private InteractivePuzzle boxPuzzle;
+
     PuzzleBlock thisBlock;
-
-    // Start is called before the first frame update
-    private void Awake()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void MovingBlocks9(int thisOne)
     {
@@ -718,7 +709,13 @@ public class BlockPuzzleScript : MonoBehaviour
                 break;
 
         }
-        
+        if(blockLocations[3].GetComponent<PuzzleBlock>().isHole && blockLocations[4].GetComponent<PuzzleBlock>().isKey)
+        {
+            //Complete puzzle, get key
+            boxPuzzle.isComplete = true;
+            boxPuzzle.GiveItem();
+            boxPuzzle.DisablePuzzle();
+        }
     }
 
 }

@@ -8,11 +8,16 @@ public class InteractivePuzzle : InteractiveObject
     private Canvas PuzzleCanvas;
     [SerializeField]
     private Camera PuzzleCamera, PlayerCamera;
+    [Tooltip("Item rewarded upon completion of the puzzle. Applies only to puzzles that put the item directly in the inventory. Leave empty if non-applicable.")]
+    [SerializeField]
+    private GameObject CompletionObject;
 
     private CanvasManager canvasManager;
     private PlayerMovement playerMovement;
     private MouseLook mouseLook;
     private PuzzleManager puzzleManager;
+    private InventoryObject CompletionObjectInv;
+    public bool isComplete = false;
 
     protected override void Awake()
     {
@@ -23,6 +28,8 @@ public class InteractivePuzzle : InteractiveObject
         puzzleManager = GetComponent<PuzzleManager>();
         PuzzleCamera.enabled = false;
         PuzzleCanvas.enabled = false;
+        if (CompletionObject != null)
+            CompletionObjectInv = CompletionObject.GetComponent<InventoryObject>();
     }
     private void Update()
     {
@@ -66,6 +73,16 @@ public class InteractivePuzzle : InteractiveObject
         playerMovement.enabled = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        if(isComplete)
+        {
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    public void GiveItem()
+    {
+        if(CompletionObject != null)
+            CompletionObjectInv.InteractWith(0);
     }
 }
 
