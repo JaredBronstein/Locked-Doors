@@ -419,11 +419,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c213b4653e3bd9c459ddc5da42c1b366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Take InventoryObject
+  displayText: Key
   inventoryID: 1
   environmentIDs: 00000000
   objectName: Key
-  description: Placeholder Text
+  description: Use on Lock
   icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
 --- !u!1 &302290137
 GameObject:
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Take InventoryNote
+  displayText: Note
   inventoryID: 0
   environmentIDs: 00000000
   objectName: InventoryNote
@@ -1719,7 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31677dd870b21fb4682b9728584a436c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: InteractiveObject
+  displayText: Puzzle
   inventoryID: 0
   environmentIDs: 01000000
   PuzzleCanvas: {fileID: 1662876555}
