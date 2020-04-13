@@ -6,81 +6,46 @@ public class FmodPlayer : MonoBehaviour
 {
     // ckrueger audio
 
-    CharacterController controller;
+    public GameObject player;
 
-    private bool isMoving = false;
-    private float distance = 1.5f;
-    private float Material;
+    private bool isMoving;
+
+    Vector3 lastPos;
+    Vector3 currentPos;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        isMoving = false;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-       // MaterialCheck();
-        Debug.DrawRay(transform.position, Vector3.down * distance, Color.blue);
-    }
+        currentPos = player.transform.position;
 
-   /* void MaterialCheck()
-    {
-        RaycastHit hit;
-
-        //this doesnt seem to want to compile right
-        hit = Physics.Raycast(transform.position, Vector3.down, distance);
-        MaterialCheck();
-        MovementCheck();
-    }
-
-    // change boolean state to reflect whether or not player is moving
-    void MovementCheck()
-    {
-        if (controller.velocity > 0.01f)
+        if (!isMoving && (currentPos.x > lastPos.x || currentPos.x < lastPos.x))
         {
+            StartFootsteps();
             isMoving = true;
         }
-        else
+        if (currentPos.x == lastPos.x)
         {
+            CancelInvoke();
             isMoving = false;
         }
+
+        lastPos = currentPos;
     }
 
-    // use a ray to check the material of colliders beneath player 
-    void MaterialCheck()
+    // play footsteps
+    private void StartFootsteps()
     {
-        RaycastHit hit;
-        Debug.DrawRay(transform.position, Vector3.down * distance, Color.blue);
-
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, distance))
-        {
-            if (hit.collider.tag == "Wood")
-            {
-                Material = 1f;
-            }
-            else if (hit.collider.tag == "Carpet")
-            {
-                Material = 2f;
-            }
-            else if (hit.collider.tag == "Stone")
-            {
-                Material = 3f;
-            }
-            else
-            {
-                Material = 1f;
-            }
-
-        }
+        InvokeRepeating("FootstepSound", 0f, 0.4f);
     }
-    */
 
-    // play footstep sound repeatedly while player is moving
-    void PlayFootstep()
+    // call footstep sound from FMOD
+    private void FootstepSound()
     {
-        if (isMoving)
-        {
-            InvokeRepeating(FMODUnity.RuntimeManager.PlayOneShot("Footsteps", gameObject.GetComponent<Transform>().position), 0f, 0.3f);
-        }
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Footsteps", gameObject.GetComponent<Transform>().position);
     }
 }
