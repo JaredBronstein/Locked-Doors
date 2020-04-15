@@ -12,7 +12,7 @@ public class FmodPlayer : MonoBehaviour
     public GameObject player;
 
     private bool isMoving;
-    private int floorMaterial; // 1f = wood, 2f = carpet, 3f = stone
+    private float floorMaterial; // 1f = wood, 2f = carpet, 3f = stone
     private string sceneName;
 
     Vector3 lastPos;
@@ -20,25 +20,33 @@ public class FmodPlayer : MonoBehaviour
 
     void Start()
     {
+        // fetch scene name
         sceneName = SceneManager.GetActiveScene().name;
 
+        // instantiate footsteps event
         Footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/Footsteps");
 
         SetFloorMaterial();
 
+        // fetch player prefab in scene
         player = GameObject.FindGameObjectWithTag("Player");
+
         isMoving = false;
     }
 
     void Update()
     {
+        // fetch player's current position
         currentPos = player.transform.position;
 
+        // if player is moving, call method that plays step sounds repeatedly
         if (!isMoving && (currentPos.x > lastPos.x || currentPos.x < lastPos.x))
         {
-            StartFootsteps();
+            RepeatFootsteps();
             isMoving = true;
         }
+
+        // if player is standing still, cancel step sounds
         if (currentPos.x == lastPos.x)
         {
             CancelInvoke();
@@ -48,45 +56,41 @@ public class FmodPlayer : MonoBehaviour
         lastPos = currentPos;
     }
 
-    // play footsteps
-    private void StartFootsteps()
+    // repeat footstep sound at set interval
+    private void RepeatFootsteps()
     {
         InvokeRepeating("FootstepSound", 0f, 0.4f);
     }
 
-    // call footstep sound from FMOD
+    // plays a single footstep sound
     private void FootstepSound()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/Footsteps", gameObject.GetComponent<Transform>().position);
+        Footsteps.start();
     }
 
-    // determines footstep sound based on scene name
+    // determines floor material based on scene name
     private void SetFloorMaterial()
     {
         switch (sceneName)
         {
             case "Bedroom":
-                floorMaterial = 2;
-                //Debug.Log("Material Set: Bedroom");
+                floorMaterial = 2; //carpet
                 break;
 
             case "Foyer":
-                floorMaterial = 1;
-                //Debug.Log("Material Set: Foyer");
+                floorMaterial = 1; //wood
                 break;
 
             case "Basement":
-                floorMaterial = 3;
-                //Debug.Log("Material Set: Basement");
+                floorMaterial = 3; //stone
                 break;
 
             default:
                 floorMaterial = 2;
-                //Debug.Log("Material Set: Default");
                 break;
         }
 
+        // set Material parameter in FMOD event to desired value
         Footsteps.setParameterByName("Material", floorMaterial);
-        Debug.Log("Material Parameter Set");
     }
 }
