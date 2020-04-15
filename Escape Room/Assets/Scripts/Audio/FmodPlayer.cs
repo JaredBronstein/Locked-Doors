@@ -4,41 +4,48 @@ using UnityEngine;
 
 public class FmodPlayer : MonoBehaviour
 {
-    private float distance = 0.05f;
-    private float Material;
+    // ckrueger audio
 
-    void FixedUpdate()
+    public GameObject player;
+
+    private bool isMoving;
+
+    Vector3 lastPos;
+    Vector3 currentPos;
+
+    void Start()
     {
-       // MaterialCheck();
-        Debug.DrawRay(transform.position, Vector3.down * distance, Color.blue);
+        player = GameObject.FindGameObjectWithTag("Player");
+        isMoving = false;
     }
 
-   /* void MaterialCheck()
+    void Update()
     {
-        RaycastHit hit;
+        currentPos = player.transform.position;
 
-        //this doesnt seem to want to compile right
-        hit = Physics.Raycast(transform.position, Vector3.down, distance);
-
-        if (hit.collider)
+        if (!isMoving && (currentPos.x > lastPos.x || currentPos.x < lastPos.x))
         {
-            if (hit.collider.tag == "Wood")
-                Material = 1f;
-            else if (hit.collider.tag == "Carpet")
-                Material = 2f;
-            else if (hit.collider.tag == "Stone")
-                Material = 3f;
-            else
-                Material = 1f;
+            StartFootsteps();
+            isMoving = true;
         }
-    }
-    */
+        if (currentPos.x == lastPos.x)
+        {
+            CancelInvoke();
+            isMoving = false;
+        }
 
-    void PlayFootstepsEvent(string path)
+        lastPos = currentPos;
+    }
+
+    // play footsteps
+    private void StartFootsteps()
     {
-        FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(path);
-        Footsteps.setParameterByName("Material", Material);
-        Footsteps.start();
-        Footsteps.release();
+        InvokeRepeating("FootstepSound", 0f, 0.4f);
+    }
+
+    // call footstep sound from FMOD
+    private void FootstepSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Footsteps", gameObject.GetComponent<Transform>().position);
     }
 }
