@@ -19,7 +19,7 @@ public class BookcasePuzzleManager : PuzzleManager
         if(ID == 7)
         {
             Book.SetActive(true);
-            InteractivePuzzle.EnvironmentIDs[0] = 0;
+            InteractivePuzzle.EnvironmentIDs[1] = 0;
         }
     }
 }
