@@ -13,6 +13,10 @@ public class Safe : MonoBehaviour
     private int CodeOne = 1, CodeTwo = 12, CodeThree = 20;
     [SerializeField]
     private Text CodeDisplay;
+    [SerializeField]
+    private InteractivePuzzle SafePuzzle;
+    [SerializeField]
+    private Animator DoorAnimator;
 
     private float Direction, DialNumber = 1;
     private int[] Solution = new int[3];
@@ -99,8 +103,9 @@ public class Safe : MonoBehaviour
     {
         if(Attempt[0] == Solution[0] && Attempt[1] == Solution[1] && Attempt[2] == Solution[2])
         {
-            //Open Safe
-            Debug.Log("Correct Answer");
+            DoorAnimator.SetBool("IsOpened", true);
+            SafePuzzle.isComplete = true;
+            SafePuzzle.DisablePuzzle();
         }
         else
         {

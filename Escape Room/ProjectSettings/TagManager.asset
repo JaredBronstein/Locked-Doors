@@ -7,6 +7,7 @@ TagManager:
   - Cloth
   - Carpet
   - Wood
+  - Trigger
   layers:
   - Default
   - TransparentFX
