@@ -5,7 +5,7 @@
 			<value>Bedroom Ambience</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fe9a1a24-7d68-478c-a832-80b2ef894fdb}</destination>
@@ -133,7 +133,6 @@
 	<object class="MixerBusEffectChain" id="{1ed1eaf4-391b-4998-bfd8-930972266073}">
 		<relationship name="effects">
 			<destination>{0614d7d0-3bbb-4b7d-b082-d00d08814707}</destination>
-			<destination>{248553d9-d153-44b6-bbd0-47e13d3e06b7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ed1b16b0-2328-4267-aff1-7f9788e1cc9e}" />
@@ -145,6 +144,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{d6534945-9b39-499c-8ddd-360540435e11}" />
 	<object class="MixerBusFader" id="{0614d7d0-3bbb-4b7d-b082-d00d08814707}" />
-	<object class="SpatialiserEffect" id="{248553d9-d153-44b6-bbd0-47e13d3e06b7}" />
 	<object class="MixerBusFader" id="{af63b070-90a5-461c-9275-9ed3f4cd7b11}" />
 </objects>
