@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2781208028961491905}
   - component: {fileID: 2781208028961491904}
-  - component: {fileID: 2781208028961491911}
+  - component: {fileID: 1401485022744607580}
   m_Layer: 0
   m_Name: Safe Camera
   m_TagString: MainCamera
@@ -307,14 +307,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2781208028961491911
-AudioListener:
+--- !u!114 &1401485022744607580
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2781208028961491910}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &2781208028999916652
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,3 +860,5 @@ MonoBehaviour:
   CodeTwo: 12
   CodeThree: 20
   CodeDisplay: {fileID: 2781208028999916654}
+  SafePuzzle: {fileID: 0}
+  DoorAnimator: {fileID: 0}

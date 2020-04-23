@@ -18,6 +18,13 @@ public class Safe : MonoBehaviour
     [SerializeField]
     private Animator DoorAnimator;
 
+    //audio
+    //instantiating FMOD events
+    FMOD.Studio.EventInstance SafeKnobClick;
+    FMOD.Studio.EventInstance SafeLocked;
+    FMOD.Studio.EventInstance SafeUnlocked;
+    FMOD.Studio.EventInstance SafeReset;
+
     private float Direction, DialNumber = 1;
     private int[] Solution = new int[3];
     private int[] Attempt = new int[3];
@@ -37,6 +44,16 @@ public class Safe : MonoBehaviour
         Attempt[1] = Attempt[2] = 0;
         Step = SafeNumber.One;
         UpdateDisplay();
+    }
+
+    //audio
+    private void Start()
+    {
+        //linking audio events to FMOD middleware
+        SafeKnobClick = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Click");
+        SafeLocked = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Locked");
+        SafeUnlocked = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Unlocked");
+        SafeReset = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Reset");
     }
 
     private void Update()
@@ -61,6 +78,9 @@ public class Safe : MonoBehaviour
         Dial.transform.eulerAngles += to;
         UpdateAttempt();
         UpdateDisplay();
+
+        //audio
+        SafeKnobClick.start();
     }
 
     private void AdjustDialNumber()
@@ -105,10 +125,17 @@ public class Safe : MonoBehaviour
         {
             DoorAnimator.SetBool("IsOpened", true);
             SafePuzzle.isComplete = true;
+
+            //audio
+            SafeUnlocked.start();
+
             SafePuzzle.DisablePuzzle();
         }
         else
         {
+            //audio
+            SafeLocked.start();
+
             //Error noise, maybe boot out of menu for reset?
             Debug.Log("Wrong Answer");
         }
@@ -118,5 +145,7 @@ public class Safe : MonoBehaviour
         Attempt[0] = Attempt[1] = Attempt[2] = 0;
         DialNumber = 1;
         Dial.transform.eulerAngles = ResetPosition;
+
+        SafeReset.start();
     }
 }
