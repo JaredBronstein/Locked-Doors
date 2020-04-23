@@ -36,9 +36,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Moving
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Position
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1187120315140816214}
   m_Solo: 0
@@ -61,9 +61,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: MovingBack
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Position
+    m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8910303269815240094}
   m_Solo: 0
@@ -86,9 +86,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: MovingBack
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Position
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3417555783184911261}
   m_Solo: 0
@@ -111,9 +111,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Moving
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Position
+    m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2314874008541119286}
   m_Solo: 0
@@ -191,9 +191,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: MovingBack
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Position
+    m_EventTreshold: 5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2314874008541119286}
   m_Solo: 0
@@ -217,16 +217,10 @@ AnimatorController:
   m_Name: Clock_Mid_Weight
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Moving
-    m_Type: 4
+  - m_Name: Position
+    m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: MovingBack
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
+    m_DefaultInt: 3
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
@@ -339,9 +333,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Moving
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Position
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8910303269815240094}
   m_Solo: 0
@@ -364,9 +358,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Moving
-    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: Position
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3417555783184911261}
   m_Solo: 0
@@ -389,9 +383,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: MovingBack
-    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: Position
+    m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 494839728946164943}
   m_Solo: 0

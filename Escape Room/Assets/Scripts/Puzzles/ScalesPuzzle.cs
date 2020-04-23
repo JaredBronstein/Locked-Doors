@@ -12,12 +12,11 @@ public class ScalesPuzzle : MonoBehaviour
     private InteractivePuzzle interactivePuzzle;
 
     Transform Scale1T, Scale2T, Scale3T;
+    private Animator Scale1Animator, Scale2Animator, Scale3Animator;
 
     public int scale1Line, scale2Line, scale3Line;
-    float scale1InitialHeight, scale2InitialHeight, scale3InitialHeight;
     private bool isComplete;
 
-    // Start is called before the first frame update
     void Awake()
     {
         interactivePuzzle = GetComponent<InteractivePuzzle>();
@@ -26,9 +25,9 @@ public class ScalesPuzzle : MonoBehaviour
         Scale2T = Scale2.GetComponent<Transform>();
         Scale3T = Scale3.GetComponent<Transform>();
 
-        scale1InitialHeight = Scale1T.position.y;
-        scale2InitialHeight = Scale2T.position.y - 0.2f;
-        scale3InitialHeight = Scale3T.position.y;
+        Scale1Animator = Scale1.GetComponent<Animator>();
+        Scale2Animator = Scale2.GetComponent<Animator>();
+        Scale3Animator = Scale3.GetComponent<Animator>();
 
         scale1Line = 1;
         scale2Line = 3;
@@ -122,38 +121,19 @@ public class ScalesPuzzle : MonoBehaviour
                         scale1Line = 1;
                 }
                 break;
-
         }
-        UpdateScales();
     }
 
     private void UpdateScales()
     {
-        Vector3 startPosition1, startPosition2, startPosition3;
-        Vector3 endPosition1, endPosition2, endPosition3;
-
-        //Scale 1
-        startPosition1 = Scale1T.position;
-        endPosition1 = new Vector3(Scale1T.position.x, scale1InitialHeight + 0.1f * (scale1Line - 1), Scale1T.position.z);
-
-        //Scale 2
-        startPosition2 = Scale2T.position;
-        endPosition2 = new Vector3(Scale2T.position.x, scale2InitialHeight + 0.1f * (scale2Line - 1), Scale2T.position.z);
-
-        //Scale 3
-        startPosition3 = Scale3T.position;
-        endPosition3 = new Vector3(Scale3T.position.x, scale3InitialHeight + 0.1f * (scale3Line - 1), Scale3T.position.z);
-
-        for (int i = 1; i <= 10; i++)
-        {
-            Scale1T.position = Vector3.Lerp(startPosition1, endPosition1, i / 10);
-            Scale2T.position = Vector3.Lerp(startPosition2, endPosition2, i / 10);
-            Scale3T.position = Vector3.Lerp(startPosition3, endPosition3, i / 10);
-        }
+        Scale1Animator.SetInteger("Position", scale1Line);
+        Scale2Animator.SetInteger("Position", scale2Line);
+        Scale3Animator.SetInteger("Position", scale3Line);
     }
 
     private void Update()
     {
+        UpdateScales();
         if (scale1Line == 3 && scale2Line == 3 && scale3Line == 3)
         {
             interactivePuzzle.isComplete = true;
