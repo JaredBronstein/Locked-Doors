@@ -39,8 +39,10 @@ public class BookshelffPuzzle : MonoBehaviour
                 i = Books.Length;
             }   
         }
-            if(orderCorrect == true)
-                interactivePuzzle.DisablePuzzle();
+        if (orderCorrect == true)
+        {
+            interactivePuzzle.DisablePuzzle();
+        }
     }
 
     private void MatSwitch(int whichOne, int whatColor)
@@ -79,6 +81,4 @@ public class BookshelffPuzzle : MonoBehaviour
         thisBook.ChangeState(nextBookNumber);
         MatSwitch((whichOne - 1), thisBook.BookNumber);
     }
-
-
 }

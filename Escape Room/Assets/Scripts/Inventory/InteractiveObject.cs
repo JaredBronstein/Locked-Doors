@@ -14,11 +14,11 @@ public class InteractiveObject : MonoBehaviour, IInteractive
 
     [Tooltip("Number used in the environment to determine it's ID number. Zero means it can be interacted with without an object in hand and 100 means it will be overwritten")]
     [SerializeField]
-    protected int[] environmentIDs;
+    protected int[] environmentIDList;
 
     public virtual string DisplayText => displayText;
     public int InventoryID => inventoryID;
-    public int[] EnvironmentIDs => environmentIDs;
+    public int[] EnvironmentIDs => environmentIDList;
     protected AudioSource audioSource;
 
     protected virtual void Awake()
@@ -40,6 +40,6 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     }
     public virtual int[] ID()
     {
-        return environmentIDs;
+        return environmentIDList;
     }
 }
