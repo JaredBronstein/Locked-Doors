@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{17c9bbbd-1158-4c9f-a207-6f5c1c30c756}">
+		<property name="assetPath">
+			<value>sx_puzzle_circuit_hum_on.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.7489795918367346</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{1a785914-e0f0-41b0-84c7-21e2542e6819}</destination>
+		</relationship>
+	</object>
+</objects>

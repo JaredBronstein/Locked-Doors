@@ -67,7 +67,8 @@ MonoBehaviour:
   Path: event:/Unlock
   guid: 9fcbce5c73fbf7418ac222041020fcfe
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -90,7 +91,8 @@ MonoBehaviour:
   Path: event:/Safe Locked
   guid: ebd099ac66fb6e4ea48fd5dd20d066d2
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -199,7 +201,8 @@ MonoBehaviour:
   Path: event:/Pickup Note
   guid: 61c32a2dcb59af4b9c2a1f9fa29dcc75
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -274,7 +277,8 @@ MonoBehaviour:
   Path: event:/Safe Click
   guid: 9d94556589530841b47118a70dfb8eed
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -282,6 +286,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 203
+--- !u!114 &-7260740346356191232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
 --- !u!114 &-7114936168088169004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,12 +318,13 @@ MonoBehaviour:
   Path: event:/Footsteps
   guid: 64943c3229e7d742a38462130175716e
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3794873025334449882}
+  - {fileID: 6784248780055635441}
   MinDistance: 0
   MaxDistance: 0
   Length: 500
@@ -321,7 +343,8 @@ MonoBehaviour:
   Path: event:/Vent Unscrew
   guid: 3b082bca61bf934c8eaab8f72aa52211
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -362,7 +385,8 @@ MonoBehaviour:
   Path: event:/Waterheater
   guid: 2aa88aaa63b1234caf3fa9916bb35742
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -388,6 +412,23 @@ MonoBehaviour:
   Default: 1
   Exists: 0
 --- !u!114 &-6902454734648043572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
+--- !u!114 &-6663684869129975833
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,7 +534,8 @@ MonoBehaviour:
   Path: event:/Safe Unlocked
   guid: 55a177cff629cd43bbca2fd627c52832
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -516,7 +558,8 @@ MonoBehaviour:
   Path: event:/Pickup Generic
   guid: b539601b79ad89489f0e8fcbf6b017ef
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -671,6 +714,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-5316047356313228166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231702880184614
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-4942370511035449766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,6 +786,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4480112832938900010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231702880184614
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4358419982749066151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +855,24 @@ MonoBehaviour:
   Min: 1
   Max: 3
   Default: 1
+  Exists: 0
+--- !u!114 &-3813131465359701771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637236815731885609
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-3794873025334449882
 MonoBehaviour:
@@ -897,7 +994,8 @@ MonoBehaviour:
   Path: event:/Door Locked Attempt
   guid: 1879b96b005f644b95b1af104e2527a3
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -920,7 +1018,8 @@ MonoBehaviour:
   Path: event:/Locked Attempt Drawer
   guid: e3a0986289f0624383eff7c72d43ba95
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -997,7 +1096,8 @@ MonoBehaviour:
   Path: event:/Fae Circle
   guid: d6921fc680d5a14cb87883c102004fa4
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1201,6 +1301,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1589871727939856674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
 --- !u!114 &-1573303672363210630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,7 +1439,8 @@ MonoBehaviour:
   Path: snapshot:/Reverb Bedroom Main
   guid: 9f0863bd22cd6242a71c3bbf5795ba7c
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1330,6 +1448,40 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-972309578659342125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
+--- !u!114 &-958566121938530342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
 --- !u!114 &-663452449860659919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,7 +1497,8 @@ MonoBehaviour:
   Path: event:/Pickup Key
   guid: de673a3292dea34ab06bf8b4d2ca3fce
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1534,7 +1687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 4608254370806866893}
-  - {fileID: -7438935907718850915}
+  - {fileID: 4377088760245261319}
   EditorEvents:
   - {fileID: -7114936168088169004}
   - {fileID: 6104018849502664667}
@@ -1556,12 +1709,15 @@ MonoBehaviour:
   - {fileID: 2765113064783641777}
   - {fileID: -1002930770666495657}
   - {fileID: 3702200795478999292}
+  - {fileID: 8174916692280519386}
+  - {fileID: 3928204760656198315}
+  - {fileID: 3881148723315449637}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7438935907718850915}
+  - {fileID: 4377088760245261319}
   StringsBanks:
   - {fileID: 4608254370806866893}
-  stringsBankWriteTime: 637233319412283763
+  stringsBankWriteTime: 637236823022433352
   cacheVersion: 3
 --- !u!114 &92595570233412249
 MonoBehaviour:
@@ -1787,6 +1943,24 @@ MonoBehaviour:
   Max: 3
   Default: 1
   Exists: 0
+--- !u!114 &2471264989019803335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637236819375307493
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &2579447049351775599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,7 +2012,8 @@ MonoBehaviour:
   Path: snapshot:/Reverb Basement Main
   guid: f1e7818f66a36e4c883f6192611b494c
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1966,7 +2141,8 @@ MonoBehaviour:
   Path: snapshot:/Reverb Bedroom Closet
   guid: 4ee2fb7a21ee494a888a67d940f5165b
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2027,6 +2203,24 @@ MonoBehaviour:
   Max: 3
   Default: 1
   Exists: 0
+--- !u!114 &3823778021627783313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637236822709280093
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &3827145612764037303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2064,7 +2258,8 @@ MonoBehaviour:
   Path: event:/Basement Ambience
   guid: 7609c6b18bb8d44f8c870d01dbd18a42
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2072,6 +2267,52 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4124
+--- !u!114 &3881148723315449637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Circuit Success Thunk
+  m_EditorClassIdentifier: 
+  Path: event:/Circuit Success Thunk
+  guid: c92228ebb9527b4abe346a14808f1c9d
+  Banks:
+  - {fileID: 4377088760245261319}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3263
+--- !u!114 &3928204760656198315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Circuit Success Hum
+  m_EditorClassIdentifier: 
+  Path: event:/Circuit Success Hum
+  guid: c38c45f07c699f439477c725346872f6
+  Banks:
+  - {fileID: 4377088760245261319}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 15497
 --- !u!114 &4045084902562959775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,7 +2367,8 @@ MonoBehaviour:
   Path: event:/Safe Reset
   guid: 50c704a5ce33424bba104e4d09c7301d
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2134,6 +2376,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 614
+--- !u!114 &4377088760245261319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637236823022363533
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4558212043440855150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2149,7 +2409,8 @@ MonoBehaviour:
   Path: snapshot:/Reverb Basement Hall
   guid: bda3d894c2fedf478b2e22904aaedd27
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2171,11 +2432,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: locked-doors-fmod-project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637233319412283763
+  lastModified: 637236823022433352
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1750
+    Value: 1896
   Exists: 1
 --- !u!114 &4690906855514580928
 MonoBehaviour:
@@ -2239,6 +2500,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 549
+--- !u!114 &4759899571425724814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
 --- !u!114 &4814029555890959054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2436,7 +2714,8 @@ MonoBehaviour:
   Path: event:/Bedroom Ambience
   guid: e663c0865a038845a77c466d400529c9
   Banks:
-  - {fileID: -7438935907718850915}
+  - {fileID: -4480112832938900010}
+  - {fileID: 4377088760245261319}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -2500,6 +2779,41 @@ MonoBehaviour:
   Max: 3
   Default: 1
   Exists: 1
+--- !u!114 &6784248780055635441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 1
+--- !u!114 &6827801242476065929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637236820890214592
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6932993920211512366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,6 +2883,29 @@ MonoBehaviour:
   Max: 3
   Default: 1
   Exists: 0
+--- !u!114 &8174916692280519386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Circuit Rotate
+  m_EditorClassIdentifier: 
+  Path: event:/Circuit Rotate
+  guid: 5cae64e36ea1574e8cf6d311d87b44d7
+  Banks:
+  - {fileID: 4377088760245261319}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 271
 --- !u!114 &8180887996627895541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2591,6 +2928,41 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 121
+--- !u!114 &8186779148784455164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: locked-doors-fmod-project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637236821985252349
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8298045910456380998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Material
+  m_EditorClassIdentifier: 
+  Name: Material
+  Min: 1
+  Max: 3
+  Default: 1
+  Exists: 0
 --- !u!114 &8350328454856677099
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,10 +14,25 @@ public class RotatePuzzle : MonoBehaviour
     Circuits thisCircuit;
 
     public bool correctFormation;
-    
+
+    //audio
+    //instantiating FMOD events
+    FMOD.Studio.EventInstance PlaySound_CircuitRotate;
+    FMOD.Studio.EventInstance PlaySound_CircuitSuccessThunk;
+    FMOD.Studio.EventInstance PlaySound_CircuitSuccessHum;
+
     void Awake()
     {
         correctFormation = false;
+    }
+
+    //audio
+    private void Start()
+    {
+        //linking audio events to FMOD middleware
+        PlaySound_CircuitRotate = FMODUnity.RuntimeManager.CreateInstance("event:/Circuit Rotate");
+        PlaySound_CircuitSuccessThunk = FMODUnity.RuntimeManager.CreateInstance("event:/Circuit Success Thunk");
+        PlaySound_CircuitSuccessHum = FMODUnity.RuntimeManager.CreateInstance("event:/Circuit Success Hum");
     }
 
     // Update is called once per frame
@@ -33,6 +48,16 @@ public class RotatePuzzle : MonoBehaviour
             thisCircuit.RotationNumber = 0;
 
         thisCircuit.ChangeState(thisCircuit.RotationNumber + 1);
+
+        //audio
+        PlaySound_CircuitRotate.start();
+
+        //audio
+        if (correctFormation)
+        {
+            PlaySound_CircuitSuccessThunk.start();
+            PlaySound_CircuitSuccessHum.start();
+        }
     }
 
     private void CheckRotations()
