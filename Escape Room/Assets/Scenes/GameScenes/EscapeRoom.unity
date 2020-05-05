@@ -1579,6 +1579,141 @@ Transform:
   m_Father: {fileID: 894380377}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 36.281002, z: 0}
+--- !u!1 &68632157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 88734311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &68632158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 88734311}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &68632159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68632157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: The Box
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: The Box
+  description: "\t(\u201CWork Log\u201D is crossed out.)\r\n\r\nElizabeth,\r\n\r\nAs
+    to how we managed to lock the front entrance from the inside, I\u2019ll leave
+    it to your imagination. After everything else, it\u2019s tremendously mundane.
+    I\u2019m not sure if you\u2019ll ever read this\u2026\r\n\r\nThe key is in the
+    basement. You saw it, I\u2019m sure, once you returned. Bolted to the edge of
+    the circle, I made it myself. I hope you like it. You always liked those sorts
+    of things. It\u2019s simple, really. The bow of the key must go left. The blade
+    right. Line them up beside a center edge, and the mechanism will do the rest.\r\n\r\nAnd
+    once you\u2019re out. Burn it. All of it. Until the woods are cinder and the home
+    a pile of ash.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &68632160
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68632157}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &74455215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +2227,103 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 84095160}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &88734311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: The Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40100008
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037336382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34280005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1 &91197360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,6 +2454,142 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93478174}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &96584786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 725466294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &96584787 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 725466294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &96584788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96584786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: The Cage
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: The Cage
+  description: "(Appears to be a diary entry)\r\n\r\nA poem:\r\n\r\nI met a man by
+    the streetside\r\nHis hair was sandy, his freckled face was red\r\nI asked him
+    his name, but he laughed\r\n\u201CWhat\u2019s the use?\u201D He said\r\nHis grin
+    became tears\r\nHis anger resignation\r\nAnd as he waltzed away, humming and weeping
+    and whistling all the while\r\nI wondered what must make him act in this way.\r\n\r\nWe
+    all live in cages, even the most free among us\r\nThey frolic behind golden bars\r\nAnd
+    do not notice that bars of gold shatter more easily than our cast steels and irons.\r\nMy
+    cage screams.\r\nBut I pretend it does not exist.\r\nMy cage sobs and I turn my
+    eyes away\r\nMy cage laughs\r\nAnd I find this strange feeling in my chest\r\n\r\nIs
+    this love? Or is this resignation?\r\nI wonder if I may outgrow this cage.\r\nOr
+    will it grow alongside me and continue to chain me to the ground.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &96584789
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96584786}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &96715935
 GameObject:
   m_ObjectHideFlags: 0
@@ -4357,6 +4725,137 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 187343820}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &192909183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 278764840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &192909184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 278764840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &192909185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192909183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: The Princess and the Guard
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: The Princess and the Guard
+  description: "\t(Appears to be a diary entry)\r\n\r\n\tA poem:\r\n\r\n\tThe sparrow\u2019s
+    guard was tall. It loomed.\r\n\t\u201CAnd the beggar,\u201D they asked\r\n\t\u201CAnd
+    the beggar,\u201D they demanded\r\n\t\r\n\t\u201CFalling rocks\u201D replied the
+    princess\r\n\t\u201CHad the sparrow cared to look, he would have seen my tower
+    sway\u201D\r\n\t\r\n\t\u201CAnd the beggar?\u201D Pleaded the guard\r\n\tAnd left
+    the princess to her lonesome\r\n\tAll the while the tower tottered\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &192909186
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192909183}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &194919173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6102,6 +6601,103 @@ Transform:
   m_Father: {fileID: 894380377}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 36.281002, z: 0}
+--- !u!1001 &278764840
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: The Princess and the Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.308
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.952
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.011772221
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.048016693
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0025599657
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.99877393
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.3330001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 354.491
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.358
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4010005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037300005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34280005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1 &285568555
 GameObject:
   m_ObjectHideFlags: 0
@@ -6368,6 +6964,103 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292227468}
   m_CullTransparentMesh: 0
+--- !u!1001 &304952339
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: Breadcrumbs
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.241
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9839615
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.17838123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 200.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40100017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037336382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34280014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1 &304977057
 GameObject:
   m_ObjectHideFlags: 0
@@ -6569,7 +7262,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 70eb064ce617ce245921700639da4ef7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.931
+      value: -1.913
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 70eb064ce617ce245921700639da4ef7,
         type: 3}
@@ -6638,6 +7331,103 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70eb064ce617ce245921700639da4ef7, type: 3}
+--- !u!1001 &312497582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: The Midnight Strangers
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.707
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.974
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.848
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5696312
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.82190037
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 290.551
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4010005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037336382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34280044
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1001 &324002681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12946,6 +13736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vent
       objectReference: {fileID: 0}
+    - target: {fileID: -8563021354836925314, guid: b301c442a100ced4aa482c3d8659198c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7bf3ceba07e80ff4380ca5ba949038ec, type: 2}
     - target: {fileID: -4216859302048453862, guid: b301c442a100ced4aa482c3d8659198c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13016,11 +13811,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 32.438175
       objectReference: {fileID: 0}
-    - target: {fileID: -8563021354836925314, guid: b301c442a100ced4aa482c3d8659198c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7bf3ceba07e80ff4380ca5ba949038ec, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b301c442a100ced4aa482c3d8659198c, type: 3}
 --- !u!4 &567666436 stripped
@@ -13854,6 +14644,148 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593639650}
   m_CullTransparentMesh: 0
+--- !u!1 &596752993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 312497582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &596752994 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 312497582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &596752995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596752993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: The Midnight Strangers
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: The Midnight Strangers
+  description: "\t(Appears to be a diary entry)\r\n\r\n\tThey arrived at night, as
+    they always did. Tiny whispers echo across the walls of my room, little fingers
+    run against the ground as they scamper. The edges of my room take a hue, not unlike
+    the circle in the basement. It\u2019s mystical. The most magical thing in the
+    world, or outside it.\r\n\r\n\tBut the hue was dim tonight. The skitters faint,
+    and the voices pained.\r\n\r\n\t\u201CHurt.\u201D They said as tiny little squeals
+    spilled from the walls. \u201CHurt. Hurt. Hurt.\u201D\r\n\r\n\tAnd as the hands
+    reached towards me, faces etched outward from the shadow and the glow, I saw my
+    friends, for the first time, I saw them well and truly. Its skin was like coral,
+    stretched impossibly thin over bones that morphed and curved with every scraping
+    step.  I blinked once, then twice, and a legion of dark eyes blinked back.\r\n\r\n\t\u201CSick.\u201D
+    The whispers said. Betrayal dripped from their tongues, as their legs shook, open
+    mouths spewed dark bile.\r\n\r\n\t\u201CWhat. have you done. To us?\u201D  They
+    asked, again and again. Each time another fell, twitching, their tiny legs spasmed
+    and their mouths slick with enmity; soon only one remained to ask their ominous
+    question.\r\n\r\n\tWhen I woke again in daylight, the bodies were gone, but the
+    stench remained.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &596752996
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596752993}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &600894866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14150,26 +15082,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wardrobe
       objectReference: {fileID: 0}
-    - target: {fileID: 2248144804056377291, guid: 6f80175e1e98a994187794503a7f1c09,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5927453990992264546, guid: 6f80175e1e98a994187794503a7f1c09,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -955357671323077235, guid: 6f80175e1e98a994187794503a7f1c09,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.024
-      objectReference: {fileID: 0}
-    - target: {fileID: -955357671323077235, guid: 6f80175e1e98a994187794503a7f1c09,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0549068
-      objectReference: {fileID: 0}
     - target: {fileID: -6777973513752598876, guid: 6f80175e1e98a994187794503a7f1c09,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -14245,6 +15157,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6256504
       objectReference: {fileID: 0}
+    - target: {fileID: -955357671323077235, guid: 6f80175e1e98a994187794503a7f1c09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.024
+      objectReference: {fileID: 0}
+    - target: {fileID: -955357671323077235, guid: 6f80175e1e98a994187794503a7f1c09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0549068
+      objectReference: {fileID: 0}
     - target: {fileID: 1475829238835267975, guid: 6f80175e1e98a994187794503a7f1c09,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -14279,6 +15201,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -2.0640001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2248144804056377291, guid: 6f80175e1e98a994187794503a7f1c09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5927453990992264546, guid: 6f80175e1e98a994187794503a7f1c09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f80175e1e98a994187794503a7f1c09, type: 3}
@@ -16026,6 +16958,103 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 722000277}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &725466294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: The Cage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.917
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.494
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.94132626
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.33749807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 140.55101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40100017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037336382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34280014
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1001 &734626763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16407,6 +17436,137 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &763493492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1323980769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &763493493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1323980769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &763493494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763493492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Faulty Wiring
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: Faulty Wiring
+  description: "\t(Labeled \u201CWork Log\u201D)\r\n\r\n\tThe wiring is still a bit
+    unstable. The basement is the big issue right now, for whatever reason it really
+    sucks up power. We\u2019ll have to postpone renovations on it for now and focus
+    on making sure the house has enough energy to run.\r\n\t\r\n\tAs it stands right
+    now, there\u2019s a blown circuit preventing any power from getting to the second
+    floor. I\u2019ll need to fix that asap.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &763493495
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763493492}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &765465925
 GameObject:
   m_ObjectHideFlags: 0
@@ -17782,6 +18942,45 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7e035aa97773cb46b1eb10458e2ef91, type: 3}
+--- !u!1 &812454400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812454401}
+  m_Layer: 0
+  m_Name: Foyer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &812454401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812454400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 763493493}
+  - {fileID: 1678373084}
+  - {fileID: 96584787}
+  - {fileID: 1771219529}
+  - {fileID: 596752994}
+  - {fileID: 1604289677}
+  - {fileID: 192909184}
+  - {fileID: 873786774}
+  - {fileID: 68632158}
+  m_Father: {fileID: 1851003894}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &820790254
 GameObject:
   m_ObjectHideFlags: 0
@@ -18949,6 +20148,145 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7e035aa97773cb46b1eb10458e2ef91, type: 3}
+--- !u!1 &873786773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1033573968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &873786774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1033573968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &873786775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873786773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: The Nonogram
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: The Nonogram
+  description: "\t(Appears to be a diary entry)\r\n\r\n\tLife is like a puzzle. A
+    teacher told me that, once, I think. Like one of the nonograms that my parents
+    toss towards me when they want peace or silence. It\u2019s simple, really, you
+    need to know what is meant to be filled, and what is meant to be left alone.\r\n\r\n\tAnd
+    the picture is invisible, until the last moment. I believe that. The big picture
+    can\u2019t be seen until all the sections are filled; until every square has fallen
+    into place and the purpose becomes clear.\r\n\r\n\tYet, somehow. I wish to have
+    seen this picture sooner. Perhaps if the squares were clearer to me, the sections
+    filled beforehand, some outline of the ending set, the course could have been
+    changed. Some things are meant to be avoided. Most things aren\u2019t.\r\n\r\n\tThis
+    picture. Here, today. It\u2019s painted and posted, completed and comprehended.
+    It\u2019s a picture of my mother, holding her youngest daughter tightly. Of my
+    father, looming like he does, with a rueful smile on his face as he holds his
+    wife tight.\r\n\r\n\tAnd I am nowhere to be seen.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &873786776
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873786773}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &874195432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20861,6 +22199,103 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &930178473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: An Old House
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.865
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.94132626
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.33749807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 140.55101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.40100008
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037336382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34280005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1 &933033980
 GameObject:
   m_ObjectHideFlags: 0
@@ -23552,6 +24987,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030524317}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1033573968
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: The Nonogram
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.857
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0094870385
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4776364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0074252766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.878475
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.549
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 302.927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.2670001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4010005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037300005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34280002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1001 &1034367835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29127,6 +30659,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321824276}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1323980769
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: Faulty Wiring
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.56184274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8272441
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 68.367004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4010002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037336382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3428001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1 &1325609406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
@@ -33588,6 +35217,103 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1507980945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1512517488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 812454401}
+    m_Modifications:
+    - target: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_Name
+      value: The Bath
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.099
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.091
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.031991277
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.04812512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.010159
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9982772
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 3.6060002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 354.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.3410001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4010005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.0037336382
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.34279996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: ReadableText
+      value: "\t(The page is wet and almost illegible)\r\n\r\nArmillaria mell------\r\n\r\nParasitic-------non
+        toxic species-------\r\nCa-able of bio luminescence--often fou---\r\nOnl--
+        -ui--ly low lighting --------- -- -- ------\r\nVarying shades -- ------- ----
+        ch-ara--ristic glow.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153606877355750346, guid: 6bec94281f2097a4093cdbf564188a09,
+        type: 3}
+      propertyPath: SpecialConsiderations
+      value: "Adds \u201CFind a way to make the mushrooms glow\u201D to players list."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bec94281f2097a4093cdbf564188a09, type: 3}
 --- !u!1001 &1515328564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34057,6 +35783,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Stack_of_Boxes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -5037625529645335234, guid: 95af1d7562e51f649b90a293eb7984ce,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     - target: {fileID: -4216859302048453862, guid: 95af1d7562e51f649b90a293eb7984ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34127,11 +35858,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 35.8838
       objectReference: {fileID: 0}
-    - target: {fileID: -5037625529645335234, guid: 95af1d7562e51f649b90a293eb7984ce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95af1d7562e51f649b90a293eb7984ce, type: 3}
 --- !u!4 &1543366295 stripped
@@ -35031,6 +36757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Stack_of_Boxes (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -5037625529645335234, guid: 95af1d7562e51f649b90a293eb7984ce,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     - target: {fileID: -4216859302048453862, guid: 95af1d7562e51f649b90a293eb7984ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35101,11 +36832,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 26.452896
       objectReference: {fileID: 0}
-    - target: {fileID: -5037625529645335234, guid: 95af1d7562e51f649b90a293eb7984ce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95af1d7562e51f649b90a293eb7984ce, type: 3}
 --- !u!4 &1583930828 stripped
@@ -35796,6 +37522,143 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1604289676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512517488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1604289677 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512517488}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1604289678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604289676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: The Bath
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: The Bath
+  description: "\t(Appears to be a diary entry)\r\n\r\n\tDad says there\u2019s no
+    iron in the home. The metal pipes are a composite. The wires in the furniture
+    too. No, there\u2019s no iron here, the design obvious. They hate iron. I read
+    somewhere that it burns them, someplace else that it makes them shrivel away,
+    like a slug under salt.\r\n\r\n\tWe are a modern family. Our tools have iron.
+    Coins he collected, iron as well.\r\n\r\n\tI know what needs to happen. The water
+    was warm like Scarlett likes it. And it was filled to the brim with iron. Everything
+    I could find, every metal we owned, until the tub stank of it. \r\n\r\n\tAnd then
+    it was time to bathe.\r\n\r\n\tShe shrieked. Thrashed and clawed. The water sloshed
+    around her, I thought, for a moment, I was wrong. Maybe I had run the water a
+    bit warm, and she was burning, boiling. But the chill in my stomach never wavered.\r\n\r\n\tAnd
+    then the water was black, and thick. And she was gone.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &1604289679
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604289676}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1604728415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37375,6 +39238,139 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1678373083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 930178473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1678373084 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 930178473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1678373085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678373083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: An Old House
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: An Old House
+  description: "\t(Appears to be a diary entry)\r\n\r\nThe woods are lovely. I had
+    missed living near somewhere with nature, the city was far too noisy, and the
+    air tasted strange no matter the time of day. They told me I would get used to
+    it eventually. That day never came. I\u2019m thankful my time there was brief.\r\n\r\nBut
+    the house, it\u2019s old. Everything inside tastes like mold and dust and the
+    floors shake under even the lightest weight. I dreamt last night that, when my
+    foot fell, the ground beneath me opened and I sank further and further into a
+    labyrinth of splintered wood and metal.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &1678373086
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678373083}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1679493030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40026,6 +42022,146 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.13662405, y: 0.05097809, z: 0.036312427}
   m_Center: {x: 0.3919134, y: 0.02489995, z: -0.477533}
+--- !u!1 &1771219528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7416704591540213066, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 304952339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1771219529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6477061117741817288, guid: 6bec94281f2097a4093cdbf564188a09,
+    type: 3}
+  m_PrefabInstance: {fileID: 304952339}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1771219530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771219528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68645b0944e776341a38ea76f4425eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: Breadcrumbs
+  inventoryID: 0
+  environmentIDList: 00000000
+  objectName: Breadcrumbs
+  description: "\t(Appears to be a diary entry)\r\n\r\n\tIn the city, fairies are
+    little women. They beat their tiny wings and frolic freely, their dainty grasp
+    grants wishes and their gaze brings glee. Here, it seems, like the sliced toes
+    of Cinderella\u2019s sisters, the story is darker, if more interesting. Here,
+    where the coals on the stepmother\u2019s feet are red, and her dance deadly, the
+    fairies are harsher.\r\n\r\n\tScarlett cries at the pictures. I would do, were
+    I younger. The books about them are strange as well. \r\n\r\n\t\u201CBreadcrumbs,\u201D
+    they say, will keep them satisfied for some time. Milk even more. I think, probably,
+    the people who built this place saw that ring in the basement and dared not touch
+    it. Dad won\u2019t remove it either, although he claims it adds to a certain \u201Cantique
+    aesthetic.\u201D I think, so long as I\u2019m forced to live here, I could leave
+    some crumbs at the edge.\r\n\r\n\tPerhaps this is the beginning of my own fairy
+    tale, and a swarm of fairies, with their soft faces and ladylike grins, will come
+    to grant my wish if I do.\r\n\r\n\tBut I doubt it. You stop believing in fairies
+    eventually.\r\n"
+  icon: {fileID: 21300000, guid: dc71b81bbdc45434e804446bb674a384, type: 3}
+--- !u!82 &1771219531
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771219528}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e2671fe78d971e244947070563b9899b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1778261684
 GameObject:
   m_ObjectHideFlags: 0
@@ -41153,6 +43289,7 @@ Transform:
   m_Children:
   - {fileID: 1245181247}
   - {fileID: 78310494}
+  - {fileID: 812454401}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48114,6 +50251,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Stack_of_Boxes
       objectReference: {fileID: 0}
+    - target: {fileID: -5037625529645335234, guid: 95af1d7562e51f649b90a293eb7984ce,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     - target: {fileID: -4216859302048453862, guid: 95af1d7562e51f649b90a293eb7984ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48184,11 +50326,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 30.676226
       objectReference: {fileID: 0}
-    - target: {fileID: -5037625529645335234, guid: 95af1d7562e51f649b90a293eb7984ce,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a76c9a99ffafb34409488123cc59004d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95af1d7562e51f649b90a293eb7984ce, type: 3}
 --- !u!4 &2118260497 stripped
