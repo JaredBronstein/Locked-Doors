@@ -14,6 +14,7 @@ public class InventoryItemMenuToggle : MonoBehaviour
     public static event Action<InventoryNote> JournalMenuNoteSelected;
     private InventoryObject associatedInventoryObject;
     private InventoryNote associatedInventoryNote;
+    private Text Name;
 
     public InventoryObject AssociatedInventoryObject
     {
@@ -32,6 +33,7 @@ public class InventoryItemMenuToggle : MonoBehaviour
         {
             associatedInventoryNote = value;
             iconImage.sprite = associatedInventoryNote.Icon;
+            Name.text = associatedInventoryNote.ObjectName;
         }
     }
 
@@ -57,5 +59,6 @@ public class InventoryItemMenuToggle : MonoBehaviour
         Toggle toggle = GetComponent<Toggle>();
         ToggleGroup toggleGroup = GetComponentInParent<ToggleGroup>();
         toggle.group = toggleGroup;
+        Name = GetComponentInChildren<Text>();
     }
 }
