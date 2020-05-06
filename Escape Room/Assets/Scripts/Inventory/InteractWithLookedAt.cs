@@ -33,6 +33,11 @@ public class InteractWithLookedAt : MonoBehaviour
             idTracker.ResetID();
             HUDcontroller.ResetImage();
         }
+        if(Input.GetButtonDown("Fire2"))
+        {
+            idTracker.ResetID();
+            HUDcontroller.ResetImage();
+        }
     }
 
     /// <summary>
