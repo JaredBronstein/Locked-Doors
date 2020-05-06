@@ -34,11 +34,11 @@ public class CanvasManager : MonoBehaviour
     {
         if(canUse)
         {
-            if (Input.GetButtonDown("Inventory") && !journalCanvas.interactable)
+            if (Input.GetButtonDown("Inventory"))
             {
                 ToggleInventory();
             }
-            if (Input.GetButtonDown("Notebook") && !inventoryCanvas.interactable)
+            if (Input.GetButtonDown("Notebook"))
             {
                 ToggleJournal();
             }
