@@ -59,7 +59,7 @@ public class JournalMenu : MonoBehaviour
     private void HandleInput()
     {
         //Goes back to a prior menu, so if in todo list, go back to main tab, if in a specific note, go back to the note tab
-        if (Input.GetButtonDown("Back"))
+        if (Input.GetButtonDown("Back") && canvasManager.canUse)
         {
             if (mainCanvas.interactable)
             {
