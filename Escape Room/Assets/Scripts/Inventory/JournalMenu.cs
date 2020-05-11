@@ -20,6 +20,7 @@ public class JournalMenu : MonoBehaviour
     private PlayerMovement playerMovement;
     private InventoryMenu inventoryMenu;
     private MouseLook mouseLook;
+    private CanvasManager canvasManager;
     private static JournalMenu instance;
     private List<GameObject> list = new List<GameObject>();
 
@@ -43,6 +44,7 @@ public class JournalMenu : MonoBehaviour
             throw new System.Exception("There is already an instance of InventoryMenu and there can only be one!");
 
         inventoryMenu = FindObjectOfType<InventoryMenu>();
+        canvasManager = FindObjectOfType<CanvasManager>();
         mainCanvas = mainPanel.GetComponent<CanvasGroup>();
         noteCanvas = notePanel.GetComponent<CanvasGroup>();
         todoCanvas = todoPanel.GetComponent<CanvasGroup>();
@@ -57,9 +59,17 @@ public class JournalMenu : MonoBehaviour
     private void HandleInput()
     {
         //Goes back to a prior menu, so if in todo list, go back to main tab, if in a specific note, go back to the note tab
-        if(Input.GetButtonDown("Back"))
+        if (Input.GetButtonDown("Back") && canvasManager.canUse)
         {
-            ReturntoMain();
+            if (mainCanvas.interactable)
+            {
+                ReturntoMain();
+                canvasManager.ToggleInventory();
+            }
+            else
+            {
+                ReturntoMain();
+            }
         }
     }
 
