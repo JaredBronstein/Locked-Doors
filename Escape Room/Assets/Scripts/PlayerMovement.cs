@@ -25,6 +25,17 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    JournalGoal journalGoal;
+
+    private void Awake()
+    {
+        journalGoal = GetComponent<JournalGoal>();
+    }
+
+    private void Start()
+    {
+        journalGoal.AddGoal();
+    }
 
     void Update()
     {
