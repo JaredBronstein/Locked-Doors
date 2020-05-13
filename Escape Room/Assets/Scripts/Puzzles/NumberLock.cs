@@ -10,6 +10,9 @@ public class NumberLock : MonoBehaviour
     [SerializeField]
     private GameObject DialOne, DialTwo, DialThree;
 
+    [SerializeField]
+    private GameObject LockedObject;
+
     private int[] Attempt = new int[3];
     private InteractivePuzzle LockPuzzle;
 
@@ -17,6 +20,7 @@ public class NumberLock : MonoBehaviour
     {
         Attempt[0] = Attempt[1] = Attempt[2] = 6;
         LockPuzzle = GetComponent<InteractivePuzzle>();
+        LockedObject.GetComponent<BoxCollider>().enabled = false;
     }
 
     public void RotateDial(int Number)
@@ -49,6 +53,8 @@ public class NumberLock : MonoBehaviour
         {
             LockPuzzle.isComplete = true;
             LockPuzzle.DisablePuzzle();
+            this.gameObject.SetActive(false);
+            LockedObject.GetComponent<BoxCollider>().enabled = true;
         }
     }
 
