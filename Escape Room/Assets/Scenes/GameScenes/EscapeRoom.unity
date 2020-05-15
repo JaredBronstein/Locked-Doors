@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44036433, g: 0.4889419, b: 0.56910294, a: 1}
+  m_IndirectSpecularColor: {r: 0.44036514, g: 0.48894238, b: 0.56910396, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17364,7 +17364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &603836935
 Transform:
   m_ObjectHideFlags: 0
@@ -35273,7 +35273,7 @@ PrefabInstance:
     - target: {fileID: 4432378009799937931, guid: b15dda3c9cc92bc469478b06f413f68a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7
+      value: -14.66
       objectReference: {fileID: 0}
     - target: {fileID: 4432378009799937931, guid: b15dda3c9cc92bc469478b06f413f68a,
         type: 3}
@@ -35283,7 +35283,7 @@ PrefabInstance:
     - target: {fileID: 4432378009799937931, guid: b15dda3c9cc92bc469478b06f413f68a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.45
+      value: -12.21
       objectReference: {fileID: 0}
     - target: {fileID: 4432378009799937931, guid: b15dda3c9cc92bc469478b06f413f68a,
         type: 3}
@@ -50908,8 +50908,8 @@ MonoBehaviour:
   - {fileID: 186403237}
   - {fileID: 220246236}
   - {fileID: 1680224754}
-  regshroom: {fileID: 0}
-  glowshroom: {fileID: 0}
+  regshroom: {fileID: 1283519478}
+  glowshroom: {fileID: 603836934}
 --- !u!65 &1890457372
 BoxCollider:
   m_ObjectHideFlags: 0

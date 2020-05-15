@@ -7,11 +7,12 @@ public class LightSwitch : InteractiveObject
     [SerializeField]
     private Light[] lights;
 
+    [SerializeField]
+    private GameObject regshroom, glowshroom;
+
     private float[] lightIntensities;
 
-    private bool ison = false;
-    [SerializeField] GameObject regshroom;
-    [SerializeField] GameObject glowshroom;
+    private bool isOn = true;
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class LightSwitch : InteractiveObject
         {
             lightIntensities[i] = lights[i].intensity;
         }
+        regshroom.SetActive(true);
+        glowshroom.SetActive(false);
     }
 
     public override void InteractWith(int id)
@@ -28,10 +31,26 @@ public class LightSwitch : InteractiveObject
         for(int i=0; i < lights.Length; i++)
         {
             if (lights[i].intensity > 0)
+            {
                 lights[i].intensity = 0;
-
+            }
             else
+            {
                 lights[i].intensity = lightIntensities[i];
+            }
+
+        }
+        if(isOn)
+        {
+            isOn = false;
+            glowshroom.SetActive(true);
+            regshroom.SetActive(false);
+        }
+        else
+        {
+            isOn = true;
+            glowshroom.SetActive(false);
+            regshroom.SetActive(true);
         }
     }
 
