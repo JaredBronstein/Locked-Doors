@@ -9,6 +9,10 @@ public class LightSwitch : InteractiveObject
 
     private float[] lightIntensities;
 
+    private bool ison = false;
+    [SerializeField] GameObject regshroom;
+    [SerializeField] GameObject glowshroom;
+
     private void Awake()
     {
         lightIntensities = new float[lights.Length];
@@ -25,8 +29,11 @@ public class LightSwitch : InteractiveObject
         {
             if (lights[i].intensity > 0)
                 lights[i].intensity = 0;
+
             else
                 lights[i].intensity = lightIntensities[i];
         }
     }
+
+
 }
