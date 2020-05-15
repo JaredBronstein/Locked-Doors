@@ -41,7 +41,9 @@ public class BookshelffPuzzle : MonoBehaviour
         }
         if (orderCorrect == true)
         {
+            interactivePuzzle.isComplete = true;
             interactivePuzzle.DisablePuzzle();
+            this.gameObject.SetActive(false);
         }
     }
 
