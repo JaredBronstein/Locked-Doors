@@ -134,11 +134,12 @@ public class ScalesPuzzle : MonoBehaviour
     private void Update()
     {
         UpdateScales();
-        if (scale1Line == 3 && scale2Line == 3 && scale3Line == 3)
+        if (scale1Line == 3 && scale2Line == 3 && scale3Line == 3 && !isComplete)
         {
             interactivePuzzle.isComplete = true;
             interactivePuzzle.DisablePuzzle();
             interactivePuzzle.GiveItem();
+            isComplete = true;
         }
     }
 }
