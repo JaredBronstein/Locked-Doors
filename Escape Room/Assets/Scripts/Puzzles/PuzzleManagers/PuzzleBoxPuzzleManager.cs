@@ -11,10 +11,14 @@ public class PuzzleBoxPuzzleManager : PuzzleManager
     public override void InteractWithPuzzle(int ID)
     {
         base.InteractWithPuzzle(ID);
-        if(ID == 6)
+        if(ID == 8)
         {
             Lock.SetActive(false);
-            InteractivePuzzle.EnvironmentIDs[1] = 0;
+            InteractivePuzzle.EnvironmentIDs[1] = 6;
+        }
+        if(ID == 6)
+        {
+            InteractivePuzzle.EnvironmentIDs[0] = 0;
         }
     }
 }

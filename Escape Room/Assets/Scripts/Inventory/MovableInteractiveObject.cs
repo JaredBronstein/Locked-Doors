@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MovableInteractiveObject : InteractiveObject
 {
+    [SerializeField]
+    private BoxCollider HiddenItem;
+
     private Animator animator;
     private bool IsOpened;
 
@@ -11,10 +14,14 @@ public class MovableInteractiveObject : InteractiveObject
     {
         base.Awake();
         animator = GetComponent<Animator>();
+        if(HiddenItem != null)
+            HiddenItem.enabled = false;
     }
     public override void InteractWith(int ID)
     {
         base.InteractWith(ID);
+        if(HiddenItem != null)
+            HiddenItem.enabled = true;
         if (IsOpened)
             IsOpened = false;
         else if(!IsOpened)

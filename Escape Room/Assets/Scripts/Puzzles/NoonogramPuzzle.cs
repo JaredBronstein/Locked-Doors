@@ -10,6 +10,12 @@ public class NoonogramPuzzle : MonoBehaviour
     [SerializeField]
     GameObject[] Blocks;
 
+    [SerializeField]
+    private InteractivePuzzle InteractivePuzzle;
+
+    [SerializeField]
+    private MeshCollider Door;
+
     //tooltip this to literally write (size is 25 same as above)
     //  a b c d e
     //a 1 2 3 4 5
@@ -21,14 +27,13 @@ public class NoonogramPuzzle : MonoBehaviour
     bool[] Code;
 
     NonogramBlock thisBlock;
-    public bool finished;
+    public bool finished = false;
 
     private void Awake()
     {
-        finished = false;
+        Door.enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         MaterialUpdate();
@@ -47,6 +52,13 @@ public class NoonogramPuzzle : MonoBehaviour
                 finished = false;
                 i = Blocks.Length;
             }     
+        }
+        if(finished)
+        {
+            InteractivePuzzle.isComplete = true;
+            InteractivePuzzle.DisablePuzzle();
+            Door.enabled = true;
+            this.gameObject.SetActive(false);
         }
     }
 

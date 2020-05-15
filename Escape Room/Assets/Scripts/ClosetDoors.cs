@@ -11,6 +11,7 @@ public class ClosetDoors : MovableInteractiveObject
 
     protected override void Awake()
     {
+        base.Awake();
         otherDoor = OtherDoor.GetComponent<ClosetDoors>();
     }
 
@@ -18,9 +19,9 @@ public class ClosetDoors : MovableInteractiveObject
     {
         if(ID == 1)
         {
-            base.InteractWith(ID);
             environmentIDList[0] = 0;
             otherDoor.environmentIDList[0] = 0;
+            base.InteractWith(ID);
         }
     }
 }
