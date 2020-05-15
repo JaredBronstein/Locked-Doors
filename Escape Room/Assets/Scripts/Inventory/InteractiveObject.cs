@@ -28,14 +28,8 @@ public class InteractiveObject : MonoBehaviour, IInteractive
 
     public virtual void InteractWith(int id)
     {
-        try
-        {
+        if(audioSource != null)
             audioSource.Play();
-        }
-        catch (System.Exception)
-        {
-            throw new System.Exception("Missing AudioSource component: InteractiveObject requires an AudioSource component");
-        }
         Debug.Log($"Player just interacted with {gameObject.name}.");
     }
     public virtual int[] ID()
