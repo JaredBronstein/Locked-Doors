@@ -10,17 +10,22 @@ public class RotatePuzzle : MonoBehaviour
     [SerializeField]
     int[] puzzleCode;
 
+    [SerializeField]
+    private MovableInteractiveObject Door;
+
+    [SerializeField]
+    private InteractivePuzzle interactivePuzzle;
+
     Transform thisTransform;
     Circuits thisCircuit;
 
-    public bool correctFormation;
-    
-    void Awake()
+    public bool correctFormation = false;
+
+    private void Awake()
     {
-        correctFormation = false;
+        Door.CanOpen = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckRotations(); 
@@ -47,6 +52,12 @@ public class RotatePuzzle : MonoBehaviour
                 correctFormation = false;
                 i = rotatingWiresLocations.Length; 
             }
+        }
+        if(correctFormation)
+        {
+            interactivePuzzle.isComplete = true;
+            interactivePuzzle.DisablePuzzle();
+            Door.CanOpen = true;
         }
     }
 }

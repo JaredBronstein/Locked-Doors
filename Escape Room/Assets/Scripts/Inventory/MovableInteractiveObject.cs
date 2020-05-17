@@ -8,7 +8,8 @@ public class MovableInteractiveObject : InteractiveObject
     private BoxCollider HiddenItem;
 
     private Animator animator;
-    private bool IsOpened;
+    private bool IsOpened; 
+    public bool CanOpen = true;
 
     protected override void Awake()
     {
@@ -19,13 +20,16 @@ public class MovableInteractiveObject : InteractiveObject
     }
     public override void InteractWith(int ID)
     {
-        base.InteractWith(ID);
-        if(HiddenItem != null)
-            HiddenItem.enabled = true;
-        if (IsOpened)
-            IsOpened = false;
-        else if(!IsOpened)
-            IsOpened = true;
-        animator.SetBool("IsOpened", IsOpened);
+        if(CanOpen)
+        {
+            base.InteractWith(ID);
+            if (HiddenItem != null)
+                HiddenItem.enabled = true;
+            if (IsOpened)
+                IsOpened = false;
+            else if (!IsOpened)
+                IsOpened = true;
+            animator.SetBool("IsOpened", IsOpened);
+        }
     }
 }
