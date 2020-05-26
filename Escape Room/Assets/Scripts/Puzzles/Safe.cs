@@ -18,13 +18,6 @@ public class Safe : MonoBehaviour
     [SerializeField]
     private Animator DoorAnimator;
 
-    //audio
-    //instantiating FMOD events
-    FMOD.Studio.EventInstance SafeKnobClick;
-    FMOD.Studio.EventInstance SafeLocked;
-    FMOD.Studio.EventInstance SafeUnlocked;
-    FMOD.Studio.EventInstance SafeReset;
-
     private float Direction, DialNumber = 1;
     private int[] Solution = new int[3];
     private int[] Attempt = new int[3];
@@ -46,14 +39,9 @@ public class Safe : MonoBehaviour
         UpdateDisplay();
     }
 
-    //audio
     private void Start()
     {
-        //linking audio events to FMOD middleware
-        SafeKnobClick = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Click");
-        SafeLocked = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Locked");
-        SafeUnlocked = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Unlocked");
-        SafeReset = FMODUnity.RuntimeManager.CreateInstance("event:/Safe Reset");
+
     }
 
     private void Update()
@@ -79,8 +67,8 @@ public class Safe : MonoBehaviour
         UpdateAttempt();
         UpdateDisplay();
 
-        //audio
-        SafeKnobClick.start();
+        // audio
+        // safe rotate sound
     }
 
     private void AdjustDialNumber()
@@ -126,15 +114,15 @@ public class Safe : MonoBehaviour
             DoorAnimator.SetBool("IsOpened", true);
             SafePuzzle.isComplete = true;
 
-            //audio
-            SafeUnlocked.start();
+            // audio
+            // safe unlock sound
 
             SafePuzzle.DisablePuzzle();
         }
         else
         {
-            //audio
-            SafeLocked.start();
+            // audio
+            // safe locked sound
 
             //Error noise, maybe boot out of menu for reset?
             Debug.Log("Wrong Answer");
@@ -146,6 +134,7 @@ public class Safe : MonoBehaviour
         DialNumber = 1;
         Dial.transform.eulerAngles = ResetPosition;
 
-        SafeReset.start();
+        // audio
+        // safe reset sound
     }
 }
