@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public static List<InventoryObject> InventoryObjects { get; } = new List<InventoryObject>();
-    public static List<InventoryNote> InventoryNotes { get; } = new List<InventoryNote>();
+    public static List<InventoryItem> InventoryObjects { get; } = new List<InventoryItem>();
+    public static List<InventoryItem> InventoryNotes { get; } = new List<InventoryItem>();
 }

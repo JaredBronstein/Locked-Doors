@@ -7,6 +7,9 @@ public class CanvasManager : MonoBehaviour
     [SerializeField]
     private GameObject inventory, journal, hud;
 
+    public enum CanvasState { None, Inventory, Journal };
+    public CanvasState canvasState;
+
     private PlayerMovement playerMovement;
     private MouseLook mouseLook;
     private CanvasGroup inventoryCanvas, journalCanvas;
@@ -19,9 +22,41 @@ public class CanvasManager : MonoBehaviour
         playerMovement = FindObjectOfType<PlayerMovement>();
         mouseLook = FindObjectOfType<MouseLook>();
         interactWithLookedAt = FindObjectOfType<InteractWithLookedAt>();
-        hud.SetActive(true);
         inventoryCanvas = inventory.GetComponent<CanvasGroup>();
         journalCanvas = journal.GetComponent<CanvasGroup>();
+        hud.SetActive(true);
+        inventoryCanvas.alpha = 0;
+        inventoryCanvas.interactable = false;
+        inventoryCanvas.blocksRaycasts = false;
+        journalCanvas.alpha = 0;
+        journalCanvas.interactable = false;
+        journalCanvas.blocksRaycasts = false;
+        canvasState = CanvasState.None;
+    }
+
+    private void Update()
+    {
+        if (canUse)
+        {
+            if (Input.GetButtonDown("Inventory"))
+                ToggleInventory();
+
+            if (Input.GetButtonDown("Notebook"))
+                ToggleJournal();
+
+            if (Input.GetButtonDown("Cancel"))
+                CancelUI();
+        }
+    }
+
+    public void CancelUI()
+    {
+        playerMovement.enabled = true;
+        mouseLook.enabled = true;
+        interactWithLookedAt.enabled = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        hud.SetActive(true);
         inventoryCanvas.alpha = 0;
         inventoryCanvas.interactable = false;
         inventoryCanvas.blocksRaycasts = false;
@@ -30,40 +65,11 @@ public class CanvasManager : MonoBehaviour
         journalCanvas.blocksRaycasts = false;
     }
 
-    private void Update()
-    {
-        if(canUse)
-        {
-            if (Input.GetButtonDown("Inventory"))
-            {
-                ToggleInventory();
-            }
-            if (Input.GetButtonDown("Notebook"))
-            {
-                ToggleJournal();
-            }
-            if (Input.GetButtonDown("Cancel"))
-            {
-                playerMovement.enabled = true;
-                mouseLook.enabled = true;
-                interactWithLookedAt.enabled = true;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                hud.SetActive(true);
-                inventoryCanvas.alpha = 0;
-                inventoryCanvas.interactable = false;
-                inventoryCanvas.blocksRaycasts = false;
-                journalCanvas.alpha = 0;
-                journalCanvas.interactable = false;
-                journalCanvas.blocksRaycasts = false;
-            }
-        }
-    }
-
     public void ToggleInventory()
     {
-        if (inventoryCanvas.interactable)
+        if (canvasState == CanvasState.Inventory)
         {
+            canvasState = CanvasState.None;
             playerMovement.enabled = true;
             mouseLook.enabled = true;
             interactWithLookedAt.enabled = true;
@@ -79,6 +85,7 @@ public class CanvasManager : MonoBehaviour
         }
         else
         {
+            canvasState = CanvasState.Inventory;
             playerMovement.enabled = false;
             mouseLook.enabled = false;
             interactWithLookedAt.enabled = false;
@@ -94,10 +101,15 @@ public class CanvasManager : MonoBehaviour
             journalCanvas.blocksRaycasts = false;
         }
     }
+
+    /// <summary>
+    /// Turns on or off the Journal Tab
+    /// </summary>
     public void ToggleJournal()
     {
-        if (journalCanvas.interactable)
+        if (canvasState == CanvasState.Journal)
         {
+            canvasState = CanvasState.None;
             playerMovement.enabled = true;
             mouseLook.enabled = true;
             interactWithLookedAt.enabled = false;
@@ -113,6 +125,7 @@ public class CanvasManager : MonoBehaviour
         }
         else
         {
+            canvasState = CanvasState.Journal;
             playerMovement.enabled = false;
             mouseLook.enabled = false;
             interactWithLookedAt.enabled = false;

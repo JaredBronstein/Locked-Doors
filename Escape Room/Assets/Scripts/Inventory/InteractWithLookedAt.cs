@@ -33,7 +33,11 @@ public class InteractWithLookedAt : MonoBehaviour
             idTracker.ResetID();
             HUDcontroller.ResetImage();
         }
-        if(Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Observe") && lookedAtInteractive != null)
+        {
+            HUDcontroller.ChangeObservation(lookedAtInteractive.ObservationText);
+        }
+        if (Input.GetButtonDown("Fire2"))
         {
             idTracker.ResetID();
             HUDcontroller.ResetImage();

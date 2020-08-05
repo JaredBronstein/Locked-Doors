@@ -23,6 +23,11 @@ public class JournalMenu : MonoBehaviour
     private CanvasManager canvasManager;
     private static JournalMenu instance;
     private List<GameObject> list = new List<GameObject>();
+    private HotbarMenu hotbarMenu;
+
+    private InventoryItemMenuToggle[] JournalObjects;
+
+    private InventoryItem ActiveJournalNote;
 
     public static JournalMenu Instance
     {
@@ -45,6 +50,7 @@ public class JournalMenu : MonoBehaviour
 
         inventoryMenu = FindObjectOfType<InventoryMenu>();
         canvasManager = FindObjectOfType<CanvasManager>();
+        hotbarMenu = FindObjectOfType<HotbarMenu>();
         mainCanvas = mainPanel.GetComponent<CanvasGroup>();
         noteCanvas = notePanel.GetComponent<CanvasGroup>();
         todoCanvas = todoPanel.GetComponent<CanvasGroup>();
@@ -54,6 +60,69 @@ public class JournalMenu : MonoBehaviour
     private void Update()
     {
         HandleInput();
+        //for setting quick select
+        if (canvasManager.canvasState == CanvasManager.CanvasState.Journal)
+        {
+            if (Input.GetButtonDown("QuickSelect1"))
+            {
+                if (ActiveJournalNote != null)
+                {
+                    hotbarMenu.SetQuickSelect(0, ActiveJournalNote);
+                }
+            }
+            else if (Input.GetButtonDown("QuickSelect2"))
+            {
+                if (ActiveJournalNote != null)
+                {
+                    hotbarMenu.SetQuickSelect(1, ActiveJournalNote);
+                }
+            }
+            else if (Input.GetButtonDown("QuickSelect3"))
+            {
+                if (ActiveJournalNote != null)
+                {
+                    hotbarMenu.SetQuickSelect(2, ActiveJournalNote);
+                }
+            }
+            else if (Input.GetButtonDown("QuickSelect4"))
+            {
+                if (ActiveJournalNote != null)
+                {
+                    hotbarMenu.SetQuickSelect(3, ActiveJournalNote);
+                }
+            }
+            else if (Input.GetButtonDown("QuickSelect5"))
+            {
+                if (ActiveJournalNote != null)
+                {
+                    hotbarMenu.SetQuickSelect(4, ActiveJournalNote);
+                }
+            }
+            //For grabbing quick select
+            else if (canvasManager.canvasState == CanvasManager.CanvasState.None)
+            {
+                if (Input.GetButtonDown("QuickSelect1"))
+                {
+                    OnJournalMenuNoteSelected(hotbarMenu.GetQuickSelect(0));
+                }
+                else if (Input.GetButtonDown("QuickSelect2"))
+                {
+                    OnJournalMenuNoteSelected(hotbarMenu.GetQuickSelect(1));
+                }
+                else if (Input.GetButtonDown("QuickSelect3"))
+                {
+                    OnJournalMenuNoteSelected(hotbarMenu.GetQuickSelect(2));
+                }
+                else if (Input.GetButtonDown("QuickSelect4"))
+                {
+                    OnJournalMenuNoteSelected(hotbarMenu.GetQuickSelect(3));
+                }
+                else if (Input.GetButtonDown("QuickSelect5"))
+                {
+                    OnJournalMenuNoteSelected(hotbarMenu.GetQuickSelect(4));
+                }
+            }
+        }
     }
 
     private void HandleInput()
@@ -115,26 +184,43 @@ public class JournalMenu : MonoBehaviour
         mainCanvas.blocksRaycasts = true;
     }
 
-    public void AddNoteToJournal(InventoryNote NoteToAdd)
+    public void AddNoteToJournal(InventoryItem NoteToAdd)
     {
         GameObject Clone = Instantiate(NotePrefab, noteListContentArea);
         InventoryItemMenuToggle toggle = Clone.GetComponent<InventoryItemMenuToggle>();
-        toggle.AssociatedInventoryNote = NoteToAdd;
+        toggle.AssociatedInventoryItem = NoteToAdd;
+    }
+
+    public void RemoveNoteInJournal(int InventoryID)
+    {
+        JournalObjects = GetComponentsInChildren<InventoryItemMenuToggle>();
+        foreach (InventoryItemMenuToggle inventoryObject in JournalObjects)
+        {
+            if (inventoryObject.ObjectIDCheck(InventoryID))
+            {
+                hotbarMenu.CheckForDeletion(inventoryObject);
+                Destroy(inventoryObject.gameObject);
+            }
+        }
     }
 
     private void OnEnable()
     {
-        InventoryItemMenuToggle.JournalMenuNoteSelected += OnJournalMenuNoteSelected;
+        InventoryItemMenuToggle.JournalMenuItemSelected += OnJournalMenuNoteSelected;
     }
 
     private void OnDisable()
     {
-        InventoryItemMenuToggle.JournalMenuNoteSelected -= OnJournalMenuNoteSelected;
+        InventoryItemMenuToggle.JournalMenuItemSelected -= OnJournalMenuNoteSelected;
     }
 
-    private void OnJournalMenuNoteSelected(InventoryNote inventoryNoteSelected)
+    private void OnJournalMenuNoteSelected(InventoryItem inventoryNoteSelected)
     {
-        noteSpace.text = inventoryNoteSelected.Description;
+        if (inventoryNoteSelected != null)
+        {
+            noteSpace.text = inventoryNoteSelected.Description;
+            ActiveJournalNote = inventoryNoteSelected;
+        }
     }
 
     public void AddGoal(JournalGoal GoalToAdd)

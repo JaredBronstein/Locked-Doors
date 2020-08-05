@@ -8,6 +8,11 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     [SerializeField]
     protected string displayText = nameof(InteractiveObject);
 
+    [Tooltip("Text displayed when the player observes the object in the world")]
+    [TextArea(3, 8)]
+    [SerializeField]
+    protected string observationText;
+
     [Tooltip("Number used in the inventory to determine it's ID number.")]
     [SerializeField]
     protected int inventoryID;
@@ -16,20 +21,29 @@ public class InteractiveObject : MonoBehaviour, IInteractive
     [SerializeField]
     protected int[] environmentIDList;
 
+    [Tooltip("True if it removes the object used to activate from the inventory, false if otherwise")]
+    [SerializeField]
+    protected bool TakesObject;
+
     public virtual string DisplayText => displayText;
+    public virtual string ObservationText => observationText;
     public int InventoryID => inventoryID;
     public int[] EnvironmentIDs => environmentIDList;
     protected AudioSource audioSource;
+    protected InventoryMenu inventoryMenu;
 
     protected virtual void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        inventoryMenu = GetComponent<InventoryMenu>();
     }
 
     public virtual void InteractWith(int id)
     {
         if(audioSource != null)
             audioSource.Play();
+        if (TakesObject && id != 0)
+            inventoryMenu.RemoveItemInMenu(id);
         Debug.Log($"Player just interacted with {gameObject.name}.");
     }
     public virtual int[] ID()

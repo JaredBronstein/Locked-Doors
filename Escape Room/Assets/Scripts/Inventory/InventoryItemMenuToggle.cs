@@ -10,30 +10,17 @@ public class InventoryItemMenuToggle : MonoBehaviour
     [SerializeField]
     private Image iconImage;
 
-    public static event Action<InventoryObject> InventoryMenuItemSelected;
-    public static event Action<InventoryNote> JournalMenuNoteSelected;
-    private InventoryObject associatedInventoryObject;
-    private InventoryNote associatedInventoryNote;
-    private Text Name;
+    public static event Action<InventoryItem> InventoryMenuItemSelected, JournalMenuItemSelected, HotbarMenuItemSelected;
+    private InventoryItem associatedInventoryItem;
+    private Text name;
 
-    public InventoryObject AssociatedInventoryObject
+    public InventoryItem AssociatedInventoryItem
     {
-        get { return associatedInventoryObject; }
+        get { return associatedInventoryItem; }
         set
         {
-            associatedInventoryObject = value;
-            iconImage.sprite = associatedInventoryObject.Icon;
-        }
-    }
-
-    public InventoryNote AssociatedInventoryNote
-    {
-        get { return associatedInventoryNote;  }
-        set
-        {
-            associatedInventoryNote = value;
-            iconImage.sprite = associatedInventoryNote.Icon;
-            Name.text = associatedInventoryNote.ObjectName;
+            associatedInventoryItem = value;
+            iconImage.sprite = associatedInventoryItem.Icon;
         }
     }
 
@@ -45,13 +32,14 @@ public class InventoryItemMenuToggle : MonoBehaviour
     {
         //We only want to do this when the toggle is selected.
         if (isOn)
-            InventoryMenuItemSelected?.Invoke(AssociatedInventoryObject);
-    }
+        {
+            if (AssociatedInventoryItem == null) ;
 
-    public void JournalMenuNoteWasToggled(bool isOn)
-    {
-        if (isOn)
-            JournalMenuNoteSelected?.Invoke(AssociatedInventoryNote);
+            else if (AssociatedInventoryItem.IsCorrectState(0))
+                InventoryMenuItemSelected?.Invoke(AssociatedInventoryItem);
+            else if (AssociatedInventoryItem.IsCorrectState(2))
+                JournalMenuItemSelected?.Invoke(AssociatedInventoryItem);
+        }
     }
 
     private void Awake()
@@ -59,6 +47,24 @@ public class InventoryItemMenuToggle : MonoBehaviour
         Toggle toggle = GetComponent<Toggle>();
         ToggleGroup toggleGroup = GetComponentInParent<ToggleGroup>();
         toggle.group = toggleGroup;
-        Name = GetComponentInChildren<Text>();
+    }
+
+    public bool ObjectIDCheck(int ID)
+    {
+        return associatedInventoryItem.InventoryID == ID;
+    }
+
+
+    /// <summary>
+    /// Called whenever something needs to check if you have a certain item in your inventory. Essentially checks the associated object
+    /// and returns the Dialogue Bool name if there is one
+    /// </summary>
+    /// <returns>The name of the bool used in the dialogue system</returns>
+    public string ObjectDialogueBoolCheck()
+    {
+        if (associatedInventoryItem.DialogueBoolName != null)
+            return associatedInventoryItem.DialogueBoolName;
+        else
+            return null;
     }
 }

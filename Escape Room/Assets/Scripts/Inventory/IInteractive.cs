@@ -5,6 +5,7 @@
 public interface IInteractive
 {
     string DisplayText { get; }
+    string ObservationText { get; }
     int[] ID();
     void InteractWith(int id);
 }
